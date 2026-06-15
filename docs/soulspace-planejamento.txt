@@ -1,0 +1,1053 @@
+# PRD — Soulspace
+
+## O Produto
+Soulspace é um app desenvolvido para resolver o seguinte problema:
+💔 O PROBLEMA CENTRAL:
+"Solteiros(as) estão emocionalmente PREPARADOS para ter um relacionamento FELIZ, mas não sabem COMEçar e nem CONSERvar."
+
+Desdobramento da dor:
+Situação	O que acontece HOJE (jeito errado)	Impacto emocional
+1. Solteiro quer namorar MAS...	❌ Entra no Tinder/Bumble → encontra pessoas superficiais, só quer "ficar" → frustração 
+Frustração, desconfiança, baixa autoestima
+2. Solteiro tem ANSIEDADE SOCIAL	❌ Evita encontrar pessoas novas → fica isolado → solidão cresce 
+Solidão, depressão, autoisolamento
+3. Solteiro NAMORA MAS...	❌ Repete erros do passado (escolhe pessoa errada, não comunica, não desenvolve) → relacionamento falha 
+Ciclo de namoros que falham, desesperança
+4. Solteiro quer "AMAR-SE PRIMEIRO"	❌ůže entender o que quer, não sabe suas "gatilhos" emocionais → não evolui internamente 
+Não cresce, não prepara para receber alguém
+⚠️ O QUE AS PESSOAS FAZEM DE JEITO ERRADO, LENTO OU COMPLICADO:
+1. TENTAM RESOLVER NO TINDER/BUMBLE (jeito errado)
+Erro	Por que é errado?
+Foco em "encontrar alguém"	Não "preparar-se interior" → encontram pessoa, mas não sabem desenvolver relacionamento
+Superficialidade	Fotos + 3 linhas de texto → não revela personalidade, valores, intenção real
+Gamificação	"Swipe" como jogo → pessoas tratam como consumo, não como conexão humana
+Resultado:	6 reinstalções do app por ano 
+ → frustração constante
+2. TENTAM TERAPIA ONLINE (jeito lento)
+Erro	Por que é lento?
+Custo alto	R$ 150–300/sessão → 1x/semana = R$ 600–1.200/mês → inacessível para maioria
+Acesso limitado	Só 1x/semana → dor emocional袭来 → não tem suporte imediato
+Foco em "curar"	Terapia tradicional = tratar doença → stigmatiza, solteiro não quer "doente"
+Resultado:	3–6 meses para ver evolução → solteiro desiste no meio
+3. TENTAM MEDITAÇÃO GENÉRICA (jeito complicado)
+Erro	Por que é complicado?
+Apps genéricos (Calm, Headspace)	Meditação para "todos" → não específica para SOLTEIRO + ansiedade social + relacionamento
+Não conecta com objetivo	Medita para "relaxar" → não para "preparar para relacionamento"
+Pouca personalização	Não entende seu histórico emocional → meditação não resolve sua dor específica
+Resultado:	Medita 2 semanas → não vê evolução → desiste
+4. TENTAM AUTOCONHECIMENTO SOZINHO (jeito errado)
+Erro	Por que é errado?
+** leituras aleatórias**	Livro de autoajuda → não tem estrutura, não sabe aplicar no dia a dia
+Diário na mão/papel	Esquece, não analisa padrões → não vê evolução emocional
+Nenhuma orientação	"O que eu sinto?" → não sabe nomear, não sabe resolver
+Resultado:	6 meses tentando → não evolui, não entende padrões
+5. TENTAM GRUPOS DE SOLTEIROS (jeito complicado)
+Erro	Por que é complicado?
+Eventos presenciais	Requer sair de casa, enfrentar ansiedade social → difícil para quem tem fobia
+Grupos Facebook/WhatsApp	Sem filtro, sem moderação → encontra pessoas falsas, sem intenção séria
+Não tem estrutura	"Bate-papo" → não tem exercício, não tem evolução mensurável
+Resultado:	Encontra 2–3 pessoas → nenhuma séria → frustração
+🎯 RESUMO: A DOR REAL QUE SOULSPACE RESOLVE
+Problema central:
+"Solteiros querem relacionamento FELIZ, mas (1) não sabem preparar-se interior, (2) têm ansiedade para conhecer alguém, (3) não desenvolvem inteligência emocional, (4)找不到 pessoas sérias."
+
+O que fazem HOJE (jeito ERRADO):
+Attempt	Erro principal	Resultado
+Tinder/Bumble	Superficial, gamificado	6 reinstalções/ano 
+Terapia online	Custo alto, acesso limitado	Desiste em 3–6 meses
+Meditação genérica	Não específica para solteiro	Desiste em 2 semanas
+Autoconhecimento solo	Sem estrutura, sem orientação	Não evolui em 6 meses
+Grupos de solteiros	Sem filtro, sem moderação	Frustração constante
+Consequência emocional:
+Impacto	Dado real
+81 milhões de solteiros no Brasil	48,1% da população 
+Brasil = país mais ansioso do mundo	9,3% com ansiedade patológica 
+Afastamentos trabalho por saúde mental dobraram	440 mil em 2024 
+Solidão cresce 52% em 12 anos	18,6% moram sozinho 
+✅ O QUE SOULSPACE RESOLVE (jeito CORRETO):
+Problema	Solução SoulSpace	Resultado esperado
+Não sabe preparar-se interior	Diário emocional + IA Coach analisa padrões	Entende gatilhos em 7 dias
+Ansiedade social para conhecer	Exercícios de comunicação + meditação específica	Reduz ansiedade em 14 dias
+Não tem inteligência emocional	Planos de 30 dias + podcasts sobre relacionamento	Develop comunicação em 30 dias
+Não encontra pessoas sérias	Comunidade moderada de solteiros com intenção séria	Conecta com 5–10 pessoas genuínas/mês
+🎯 FRASE-CHAVE PARA O REQUISITO (marketing + produto):
+"SoulSpace resolve a dor de solteiros que QUEREM relacionamento FELIZ, mas não sabem (1) preparar-se interior, (2) reduzir ansiedade social, (3) desenvolver inteligência emocional, (4) Encontrar pessoas sérias."
+
+"Hoje, solteiros tentam Tinder (superficial), terapia (custo alto), meditação genérica (não específica) → frustração constante. SoulSpace é o app que PREPARA your alma para o relacionamento que você merece."
+
+
+
+## Público-alvo
+👤 NOME: "Mariana Silva" DEMOGRÁFICOS: Característica	Detalhe Idade	32 anos Localização	São Paulo, SP (Bairro Vila Madalena) Profissão	Gerente de Marketing Digital em empresa de e-commerce (meio porte) Renda	R$ 8.000–10.000/mês **Formaçã	 VAI DIA A DIA (rotina REAL): Horário	O que faz 07:00	Acorda, checa Instagram (vê fotos de amigos casados/namorando) → sente solidão  07:30	Tomar café, medita 5 min (app genérico Calm) → não resolve ansiedade  08:30	Metrô para trabalho (1h30) → checa Tinder no metrô (3–4 pessoas novas/dia) → 90% não responde 10:00–18:00	Trabalho: reuniões, campanhas, e-mails → ansiedade social em reuniões (não sabe falar bem)  18:30	Metrô voltar home → checa TikTok (vê conteúdo "como superar solidão") → se identifica  19:30	Jantar sozinho → senta na sofá, sente solidão crescente 20:00	Diário na mão (esquece 3x/semana) → não analisa padrões emocionais 21:00	Checa grupos WhatsApp de solteiros → 80% pessoas falsas, sem intenção séria 22:00	Dorme → pensa "por que estou tão sozinho? Por que namoros falham?" 💔 DOR EMOCIONAL REAL (o que ela sente): 1. Solidão CRÓNICA: Situação	Dor emocional Vê amigos casados	"Por que todos estão felizes e eu não?"  Feriados/Dia dos Namorados	"Dia dos Namorados = dia da solidão" → depressão sazonal Finais de semana	"Sábado à noite = ficar sozinho em casa" → solidão aumenta  Aniversários	"Vou comemorar sozinho outra vez" →autoestima baixa **2. Ansiedade SOCIAL PARA CONHEC Situação	Dor emocional Reuniões trabalho	"Não sei falar bem, fico nervosa" → ansiedade social  Encontros do Tinder	"Cheio de ansiedade antes de Encontro" → evita Encontrar Eventos sociais	"Não sei conversar com pessoas novas" → fica isolada Resultado:	Evita conhecer alguém → solidão aumenta 3. NAMOROS QUE FALHAM (ciclo): Namoro	Erro que repetiu	Resultado Namoro 1 (28 anos)	"Escolhi pessoa errada (não me valorizava)"	Falhou em 6 meses Namoro 2 (30 anos)	"Não soube comunicar (escondi sentimentos)"	Falhou em 4 meses Namoro 3 (31 anos)	"Não desenvolvi inteligência emocional"	Falheu em 8 meses Ciclo:	Repete erros → não evolui → não aprende	Desesperança 4. QUER "AMAR-SE PRIMEIRO" (nova mentalidade): Situação	Dor emocional **Lê "auto	 O que quer	Por que não consegue "Amar-me primeiro"	"Sei que preciso amar-me, mas não sei COMEçar"  "Entender meus padrões"	"Não sei quais gatilhos emocionais tenho" "Melhorar autoestima"	"Me sinto ruim quando estou sozinho" Resultado:	Não evolui internamente → não prepara para receber alguém 🎯 O QUE MARIANA QUER (objetivo REAL): Objetivo 1: "Quero encontrar alguém SÉRIO" Ela quer	Por que é importante Pessoa que quer casamento	"Não quero só 'ficar', quero relacionamento duradouro" Pessoa com valores similares	"Quero alguém que valoriza família, trabalho, crescimento" Pessoa que comunica bem	"Quero evitar namoros que falham por comunicação" **Objetivo 2: "Quero reduzir ansiedade para ENCON Ela quer	Por que é importante Falar bem em reuniões	"Quero crescer no trabalho, não quero ansiedade limitar"  Conversar com pessoas novas	"Quero encontrar alguém, mas ansiedade me paralisa" Não sentir nervosismo em Encontros	"Quero fl Objetivo 3: "Quero desenvolver inteligência emocional" Ela quer	Por que é importante Comunicar sentimentos	"Não quero esconder como antes ( Objetivo 4: "Quero amar-me PRIMEIRO" Ela quer	Por que é importante Autoestima alta	"Quero me sentir boa quando estou sozinho"  Entender padrões	"Quero não repetir erros do passado" Preparar-se interior	"Quero estar pronta para receber alguém FELIZ" 💰 POR QUE MARIANA PAGARÁ POR SOULSPACE? Motivo 1: "Dor emocional = pago para resolver" Situação	Por que paga? Ansiedade social	"Não quero viver com ansiedade → pago para resolver"  Solidão CRÓNICA	"Não quero mais sentir solidão → pago para superar"  Namoros que falham	"Não quero repetir erros → pago para aprender"  Motivo 2: "Custo acessível = investe" Comparação	Custo	Mariana paga? Terapia online	R$ 600–1.200/mês	❌ Acabou SoulSpace	R$ 39,90/mês	✅ "Dá para investir" Evento de solteiros	R$ 150–300/evento	❌ 1x/mês = caro SoulSpace anual	R$ 299,90/ano	✅ "Melhor preço" Motivo 3: "Accesso 24h = suporte imediato" Situação	Por que é important Ansiedade 20h à noite	"Terapia só 1x/semana → não tem suporte imediato" SoulSpace IA Coach 24h	"Qualquer hora, tenho apoio emocional"  Resultado:	Paga porque tem suporte quando precisa 📊 PERFIL COMPLETO DE MARIANA: Característica	Detalhe Nome	Mariana Silva Idade	32 anos Profissão	Gerente de Marketing Digital Renda	R$ 8.000–10.000/mês Local	São Paulo, SP Estado	Solteira (3 anos) Dor 1	Solidão CRÓNICA  Dor 2	Ansiedade social  Dor 3	Namoros que falham (ciclo)  Dor 4	Não sabe "amar-se primeiro"  Objetivo 1	Encontrar alguém SÉRIO (casamento) Objetivo 2	Reduzir ansiedade para ENCON Objetivo 3	Desenvolver inteligência emocional Objetivo 4	Amar-se PRIMEIRO (autoestima) Por que paga?	Dor emocional + custo acessível + suporte 24h Preço que paga	R$ 39,90/mês (ou R$ 299,90/ano) 🎯 OUTROS PERFIS SIMILARES (para escalar): Perfil 2: "Carlos Mendes" (35 anos) Característica	Detalhe Profissão	Engenheiro de Software (startup) Renda	R$ 12.000–15.000/mês Dor	Solidão + ansiedade social + não sabe conversar com mulheres Objetivo	Encontrar comp Perfil 3: "Ana Costa" (28 anos) Característica	Detalhe Profissão	Designer (escritório) Renda	R$ 6.000–8.000/mês Dor	Namoros que falham + não comunica bem + baixa autoestima Objetivo	Desenvolver inteligência emocional + amar-se primeiro Perfil 4: "Roberto Oliveira" (40 anos) Característica	Detalhe Profissão	Advogado (escritório próprio) Renda	R$ 15.000–20.000/mês Dor	Solteiro após divórcio + não sabe começar de novo Objetivo	Curar dor do divórcio + preparar para novo relacionamento
+
+## Funcionalidades principais
+1. Diário Emocional Inteligente com IA que Analisa Padrões e Gatilhos
+2. IA Coach Pessoal 24h que Oferece Suporte Emocional Real-Time Baseado no Histórico do Usuário
+3. Planos de 7–30 Dias Guiados para Superar Solidão, Reduzir Ansiedade Social e Desenvolver Inteligência Emocional para Relacionamentos
+📋 DETALHAMENTO DE EACH FUNCIONALIDADE:
+1. DIÁRIO EMOCIONAL INTELIGENTE COM IA
+Aspecto	Detalhe
+O que é	Usuário registra sentimentos do dia (texto + emojis + escala 1–10) → IA analisa e identifica padrões
+Painel visual	Gráficos de evolução emocional (semana/mês) + insights automáticos
+IA identifica	Gatilhos emocionais (ex: "ansiedade aumenta quando vê amigos casados"), tendências (ex: "solidão piora à noite"), loops (ex: "repete erro de escolher pessoa errada")
+Benefício para Mariana	"Entendo POR QUE me sinto assim → não sinto que 'sou problemática'"
+Diferencial	Não é diário na mão (esquece) → é digital + IA analisa padrões automaticamente
+2. IA COACH PESSOAL 24H
+Aspecto	Detalhe
+O que é	Chat 24h com IA que conhece histórico emocional do usuário → oferece suporte, conselhos, validação emocional
+Quando usa	"Estou ansioso agora" → IA oferece meditação rápida + exercício de respiração
+Personalização	IA lembra: "Na semana passada você disse que ansiedade aumenta aos sábados à noite → está sentindo isso hoje?"
+Benefício para Mariana	"Tenho apoio emocional quando preciso (20h à noite, quando solidão aperta) → não sinto que estou sozinha"
+Diferencial	Não é terapia (custo R$ 600–1.200/mês) → é suporte emocional imediato (R$ 39,90/mês) 
+3. PLANOS DE 7–30 DIAS GUIADOS
+Aspecto	Detalhe
+O que é	Programas estruturados com exercícios diários + meditações + podcasts + tarefas
+Planos disponíveis	- "Superar Solidão em 14 Dias"
+- "Reduzir Ansiedade Social em 21 Dias"
+- "Amar-Me Primeiro em 7 Dias"
+- "Desenvolver Inteligência Emocional para Relacionamentos em 30 Dias"
+Exercícios	Diário emocional + meditações específicas + exercícios de comunicação + podcasts sobre relacionamento + tarefas práticas (ex: "converse com 1 pessoa nova hoje")
+Benefício para Mariana	"Tenho rota clara de evolução → não sinto que estou 'tentando sozinho' sem direção"
+Diferencial	Não é meditação genérica (Calm) → é específico para SOLTEIRO + ansiedade social + relacionamento 
+🎯 POR QUE EXACTAMENTE 3 FUNCIONALIDADES?
+Razão	Por que é importante
+1. Foco	Não dividir atenção → cada feature resolve 1 dor específica
+2. Clareza	Usuário entende EXACTO o que o app faz (não é confuso)
+3. MVP rápido	3 features = desenvolvimento mais rápido (3–4 meses)
+4. Retenção alta	Cada feature gera valor → usuário continua pagando
+5. Diferencial	Apps genéricos (Calm, Therapyy) têm features dispersas → SoulSpace é nichado
+📊 COMO AS 3 FUNCIONALIDADES RESOLVEM DORS DE MARIANA:
+Dor de Mariana	Feature que resolve	Resultado
+Solidão CRÓNICA	Planos de 7–14 dias ("Superar Solidão")	Reduz solidão em 14 dias
+Ansiedade social	IA Coach 24h + exercícios de comunicação	Reduz ansiedade em 21 dias
+Namoros que falham	Diário emocional (identifica padrões) + Plano de 30 dias ("Inteligência Emocional")	Não repete erros em 30 dias
+Não sabe "amar-se primeiro"	Diário emocional + Plano de 7 dias ("Amar-Me Primeiro")	Autoestima alta em 7 dias
+✅ RESUMO:
+1. Diário Emocional Inteligente com IA que Analisa Padrões e Gatilhos
+2. IA Coach Pessoal 24h que Oferece Suporte Emocional Real-Time Baseado no Histórico do Usuário
+3. Planos de 7–30 Dias Guiados para Superar Solidão, Reduzir Ansiedade Social e Desenvolver Inteligência Emocional para Relacionamentos
+
+## Métricas de sucesso
+1ª SEMANA (Launch inicial):
+Métrica	Número
+Métrica	Número
+Usuários ativos	500 usuários
+Retenção (7 dias)	60% (300 usuários ativos na 2ª semana)
+Assinantes pagantes	100 assinantes
+Conversão (Grátis → Premium)	20% (100/500)
+Receita semanal	R$ 4.000 (100 × R$ 39,90)
+CPA (aquisição)	R$ 20/user (investimento R$ 10.000 em ads)
+🎯 30 DIAS (1º mês):
+Métrica	Número
+Usuários ativos totais	2.000 usuários
+Retenção (30 dias)	40% (800 usuários ativos no 2º mês)
+Assinantes pagantes	400 assinantes
+Conversão (Grátis → Premium)	20% (400/2.000)
+Receita mensal	R$ 16.000 (400 × R$ 39,90)
+CPA (aquisição)	R$ 18/user (investimento R$ 36.000 em ads)    
+
+RESUMO: NÚMEROS QUE DEFINIRAO SUCESSO:
+Métrica	Meta 12 meses (BR)	Meta 24 meses (BR + EUA)	Por que é sucesso?
+Usuários Premium	1.500	9.000 (1.500 BR + 7.500 EUA)	≥ 1.000 = viável
+Retenção (6 meses)	45%	50%	≥ 45% = LTV alto
+Conversão (Grátis→Premium)	30%	32%	≥ 25% = receita boa
+CPA (aquisição)	R$ 20	US$ 13	≤ R$ 25 / US$ 15 = ROI positivo
+LTV (valor vitalício)	R$ 240	US$ 600	≥ R$ 200 / US$ 500 = ROI alto
+Receita anual	R$ 720.000	R$ 3.360.000	≥ R$ 500.000 = sustentável
+
+
+──────────────────────────────────────────────────
+
+# TRD — Soulspace
+
+## Plataforma
+Mobile (iOS + Android)
+
+## Stack tecnológica
+Ainda não sei — quero sugestão
+
+## Autenticação
+Sim, com Google ou Apple
+
+## Integrações externas
+1. Stripe (ou Asaas/PagSeguro para Brasil) → PAGAMENTOS E ASSINATURAS
+Aspecto	Detalhe
+O que faz	Processa pagamentos, recorrencia mensal/anual, gestão de assinaturas
+Por que é essencial	Sobrecarga de pagamentos: autenticação, segurança, failover, relatórios
+Custo	Stripe: 2,9% + R$ 0,30 por transação (internacional) / Asaas: 3,5% (Brasil)
+Alternativa Brasil	Asaas, PagSeguro, Mercado Pago (suporte Pix automático)
+Funcionalidade	Assinatura mensal (R$ 39,90), anual (R$ 299,90), cancelamento, renovação automática
+2. Firebase (Google) → BANCO DE DADOS + AUTENTICAÇÃO + NOTIFICAÇÕES
+Aspecto	Detalhe
+O que faz	Banco de dados (diário emocional, histórico), autenticação (login), notificações push
+Por que é essencial	Armazena dados do usuário, gerencia login, entrega notificações
+Custo	Grátis até 10.000 usuários / R$ 250–500/mês (5.000–10.000 usuários)
+Funcionalidade	Login (Google, Apple, e-mail), salva diário, salva chats IA, push notifications
+3. OpenAI GPT-4 API → IA COACH 24H + ANÁLISE DE PADRÕES
+Aspecto	Detalhe
+O que faz	IA Coach (chat 24h), análise de padrões emocionais no diário, insights automáticos
+Por que é essencial	IA que entende contexto, oferece suporte emocional, identifica gatilhos
+Custo	US$ 0,03–0,06 por 1.000 tokens (≈ R$ 0,15–0,30 por conversa)
+Custo mensal (1.500 usuários)	R$ 3.000–5.000/mês (50 conversas/dia × 1.500 usuários)
+Funcionalidade	Chat IA, análise diário, insights padrões, planos personalizados
+4. SendGrid (ou Kitbrasa para Brasil) → EMAILS E COMUNICACIONES
+Aspecto	Detalhe
+O que faz	Envio de emails (confirmação de assinatura, recibos, newsletters, lembretes)
+Por que é essencial	Comunicações automáticas, recuperação de usuários, marketing
+Custo	SendGrid: grátis até 100 emails/dia / R$ 50–150/mês (10.000 emails)
+Alternativa Brasil	Kitbrasa, Sendinblue (suporte更好 PT-BR)
+Funcionalidade	Email de confirmação, recibo de pagamento, newsletter semanal, lembrete diário
+5. OneSignal (ou Firebase Cloud Messaging) → NOTIFICAÇÕES PUSH
+Aspecto	Detalhe
+O que faz	Notificações push no celular (lembrete diário, mensagem IA, plano novo)
+Por que é essencial	Mantém usuário ativo, aumenta retenção, entrega conteúdo
+Custo	Grátis até 10.000 usuários / R$ 100–200/mês (10.000–50.000 usuários)
+Funcionalidade	Lembrete "registro diário hoje", mensagem IA "estou aqui para você", "novo plano disponível"
+6. Apple Health Kit + Google Fit → SAUDE E BEM-ESTAR (opcional)
+Aspecto	Detalhe
+O que faz	Integra com dados de saúde (passos, sono, atividade) para correlacionar com emoções
+Por que é útil	"Quantos passos você fez hoje + como está seu humor" = insights mais profundos
+Custo	Grátis (integração nativa)
+Funcionalidade	Correlaciona sono + humor, atividade + ansiedade, passos + bem-estar
+7. Cloudinary (ou AWS S3) → ARMAZENAMENTO DE IMAGENS
+Aspecto	Detalhe
+O que faz	Armazena imagens (avatars, fotos de meditação, gráficos)
+Por que é essencial	Imagens não ficam no banco de dados (pesado) → ficam em storage externo
+Custo	Cloudinary: grátis até 25 GB / R$ 100–200/mês (25–100 GB)
+Funcionalidade	Avatar do usuário, fotos de meditações, gráficos de evolução
+8. Sentry → MONITORAMENTO DE ERROS
+Aspecto	Detalhe
+O que faz	Monitora erros do app, alerta quando algo falha, relatórios de performance
+Por que é essencial	Detecta bugs rapidamente, evita usuários perdendo dados
+Custo	Grátis até 5.000 erros/mês / R$ 100–250/mês (5.000–25.000 erros)
+Funcionalidade	Alerta "diário não salvou", "IA não respondeu", "erro de login"
+📊 TABELA COMPLETA DE INTEGRAÇÕES:
+Integração	Serviço	Custo mensal (1.500 usuários)	Essencial?
+Pagamentos	Stripe / Asaas	R$ 200–400 (taxas)	✅ Essencial
+Banco de dados	Firebase	R$ 250–500	✅ Essencial
+IA Coach	OpenAI GPT-4	R$ 3.000–5.000	✅ Essencial
+Email	SendGrid / Kitbrasa	R$ 50–150	✅ Essencial
+Notificações	OneSignal	R$ 100–200	✅ Essencial
+Health Kit	Apple/Google	Grátis	⚠️ Opcional
+Imagens	Cloudinary	R$ 100–200	✅ Essencial
+Monitoramento	Sentry	R$ 100–250	✅ Essencial
+TOTAL	—	R$ 4.200–7.500/mês	—
+🎯 POR QUE ESSES SERVIÇOS? (rationale):
+Integração	Por que NÃO construir do zero?
+Stripe	Pagamentos = segurança crítica (fraude, autenticação) → usar serviço especializado
+Firebase	Banco de dados + auth + push = 3 serviços → Firebase resolve tudo em 1
+OpenAI	IA = complexidade alta (treinamento, contexto) → usar API pronta
+SendGrid	Email = confiabilidade (não ser spam) → usar serviço especializado
+OneSignal	Push = delivery garantido (não perder notificação) → usar serviço especializado
+Cloudinary	Imagens = otimização (compressão, cache) → usar serviço especializado
+Sentry	Erros = detecção rápida (não perder dados) → usar serviço especializado
+
+## Volume esperado no lançamento
+Até 1.000 (lançamento pequeno)
+
+──────────────────────────────────────────────────
+
+# UserFlow — Soulspace
+
+## Ponto de entrada
+Link direto ou landing page
+
+## Primeira experiência (onboarding)
+1. TERMINA DOWNLOAD & INSTALAÇÃO
+Passo	Ação
+1	Usuário vê anúncio SoulSpace no Instagram/Facebook → clica em "Baixar agora"
+2	App instala (15–30 segundos)
+3	Usuário abre app (clicando no ícone SoulSpace)
+2. TELA DE BOAS-VINDAS (primeira tela que vê)
+Passo	Ação
+4	Tela aparece: Fundo branco suave + logo SoulSpace (coração + espaço) + texto:
+"SoulSpace: Prepare sua alma para o relacionamento que você quer"
+5	Usuário vê 3 dots de progresso no topo (1/3)
+6	Usuário vê botão verde grande no centro: "Começar agora"
+7	Usuário clica em "Começar agora"
+3. TELA DE LOGIN (primeiro registro)
+Passo	Ação
+8	Tela aparece: "Criar sua conta" + 3 opções de login:
+- Continue com Google (botão com logo Google)
+- Continue com Apple (botão com logo Apple)
+- Continue com e-mail (campo para digitar)
+9	Usuário clica em "Continue com Google" (mais rápido)
+10	Popup Google aparece → Usuário seleciona e-mail → clica em "Permitir"
+11	App volta → tela de sucesso: "Conta criada!" + green checkmark
+4. TELA DE PERFIL (primeiro preenchimento)
+Passo	Ação
+12	Tela aparece: "Vamos conhecer você melhor" + 2 dots de progresso (2/3)
+13	Usuário vê 3 campos para preencher:
+- Nome: (campo para digitar → Usuário digita "Mariana")
+- Idade: (dropdown → Usuário seleciona "32")
+- Estado: (dropdown → Usuário seleciona "Solteira")
+14	Usuário clica em campo "Nome" → digita "Mariana" → clica em "OK"
+15	Usuário clica em dropdown "Idade" → seleciona "32"
+16	Usuário clica em dropdown "Estado" → seleciona "Solteira"
+17	Usuário ve campo "Por que quer o SoulSpace?" (texto longo) → Usuário digita:
+"Quero encontrar alguém sério, mas estou ansiosa para conhecer pessoas"
+18	Usuário clica em botão verde "Continuar" no fundo da tela
+5. TELA DE OBJETIVO (primeira escolha de plano)
+Passo	Ação
+19	Tela aparece: "Qual seu objetivo principal?" + 3 dots de progresso (3/3)
+20	Usuário vê 4 opções de objetivo (cards com ícone + texto):
+- 💔 Superar solidão (card 1)
+- 😰 Reduzir ansiedade social (card 2)
+- 💪 Amar-me primeiro (card 3)
+- 🧠 Inteligência emocional para relacionamentos (card 4)
+21	Usuário clica em card 2 "Reduzir ansiedade social" (seu maior problema)
+22	Card fica verde (selecionado) + checkmark aparece
+23	Usuário clica em botão verde "Começar meu plano" no fundo
+6. TELA DE PLANO (primeira subscrição)
+Passo	Ação
+24	Tela aparece: "Escolha seu plano" + "Plano recomendado para você: Reduzir ansiedade em 21 dias"
+25	Usuário vê 2 opções de preço:
+- Mensal: R$ 39,90/mês (botão cinza)
+- Anual: R$ 299,90/ano (botão verde, destaque "7 meses grátis")
+26	Usuário clica em botão verde "Anual – R$ 299,90" (promoção)
+27	Usuário ve tela de pagamento Stripe:
+- Campo "Número do cartão" → Usuário digita
+- Campo "Validade" → Usuário digita
+- Campo "CVV" → Usuário digita
+- Checkbox "Salvar cartão para renovação automática" → Usuário clica para marcar
+28	Usuário clica em botão verde "Comprar agora"
+29	Popup confirma: "Pagamento processado!" + green checkmark
+30	App volta → tela de sucesso: "Bem-vinda ao SoulSpace, Mariana! 🎉"
+7. TELA INICIAL (primeiro uso da feature)
+Passo	Ação
+31	Tela aparece: Tela inicial SoulSpace (dashboard) + 3 sections:
+- Topo: "Olá, Mariana! Como está seu coração hoje?" + 5 emojis (😢 😐 😊 😄 🤩)
+- Centro: "Diário emocional de hoje" (botão grande)
+- Bottom: "Seu plano: Reduzir ansiedade em 21 dias" (progresso 1/21)
+32	Usuário clica em emoji "😐" (neutro) para registrar humor
+33	Emoji fica verde (selecionado)
+34	Usuário clica em botão "Diário emocional de hoje"
+35	Tela aparece: "O que você sente hoje?" + campo de texto grande
+36	Usuário digita: "Estou ansiosa porque hoje vou encontrar alguém do Tinder. Não sei se vou falar bem."
+37	Usuário clica em botão verde "Salvar" no fundo
+38	Popup confirma: "Diário salvo! IA vai analisar seus padrões." + green checkmark
+8. TELA IA COACH (primeira interação com IA)
+Passo	Ação
+39	Tela aparece: "IA Coach está aqui para você" + chat aberto
+40	IA manda mensagem automática:
+"Oi Mariana! Vi que você está ansiosa sobre o encontro. Isso é normal. Vou te ajudar: hoje você pode fazer 1 exercício de respiração antes do encontro. Quer que eu te mostre?"
+41	Usuário clica em botão "Sim, quero"
+42	IA manda: "Ótimo! Faça isso:
+1. Inspire por 4 segundos
+2. Segure por 4 segundos
+3. Expire por 6 segundos
+Repita 3 vezes. Pronto? Como está se sentindo agora?"
+43	Usuário faz exercício de respiração (3x)
+44	Usuário clica em campo de texto → digita: "Estou mais calma, graças!"
+45	Usuário clica em botão "Enviar"
+📊 PASSO A PASSO COMPLETO (resumo):
+ordem	Ação	Tempo
+1	Apertar ícone SoulSpace	0s
+2	Clicar "Começar agora"	2s
+3	Clicar "Continue com Google"	3s
+4	Permitir login Google	5s
+5	Digitar nome "Mariana"	3s
+6	Selecionar idade "32"	2s
+7	Selecionar estado "Solteira"	2s
+8	Digitar objetivo	10s
+9	Clicar "Continuar"	1s
+10	Clicar card "Reduzir ansiedade social"	2s
+11	Clicar "Começar meu plano"	1s
+12	Clicar plano "Anual"	2s
+13	Digitar cartão	15s
+14	Clicar "Comprar agora"	1s
+15	Clicar emoji "😐"	2s
+16	Clicar "Diário emocional"	1s
+17	Digitar sentimento	15s
+18	Clicar "Salvar"	1s
+19	Clicar "Sim, quero" (IA)	1s
+20	Faz	
+
+## Loop de engajamento
+AÇÃO QUE USUÁRIO REPETE TODA VEZ QUE ABRE O APP:
+📝 REGISTRAR HUMOR + DIÁRIO EMOCIONAL (30–60 segundos)
+
+📋 PASSO A PASSO DO LOOP (literal):
+Passo	Ação	Tempo
+1	Usuário abre app (clicando no ícone SoulSpace)	0s
+2	Tela aparece: "Olá, Mariana! Como está seu coração hoje?" + 5 emojis (😢 😐 😊 😄 🤩)	1s
+3	Usuário clica em 1 emoji (ex: 😐 para "neutro")	2s
+4	Emoji fica verde (selecionado)	0s
+5	Usuário clica em botão "Diário de hoje" (aparece automaticamente)	1s
+6	Tela aparece: "O que você sente hoje?" + campo de texto grande	1s
+7	Usuário digita 1–3 frases (ex: *"Ansiosa porque hoje vou trabalhar em reunião. Fico nervosa quando tenho	
+| 8 | Usuário clica em "Salvar" | 1s |
+
+| 9 | Popup confirma: "Diário salvo! IA analisa seus padrões." | 2s |
+
+| 10 | IA manda mensagem automática no chat: "Vi que você está ansiosa. Faça 1 exercício de respiração agora. Quer que eu te mostre?" | 0s |
+
+| 11 | Usuário clica em "Sim, quero" | 1s |
+
+| 12 | IA mostra exercício → Usuário faz respiração (3x, 30s) | 30s |
+
+| 13 | Usuário digita resposta: "Estou mais calma!" | 3s |
+
+| 14 | Usuário clica em "Enviar" | 1s |
+| 15 | IA confirma: "Isso! Você conseguiu reduzir ansiedade. Próximo exercício amanhã." | 0s |
+
+⏱️ TEMPO TOTAL DO LOOP:
+Etapa	Tempo
+Registrar humor	2s
+Digitar diário	15s
+Salvar	1s
+Interagir com IA	5s
+Faz exercício	30s
+Responder IA	3s
+TOTAL	56s (menos de 1 minuto)
+🎯 POR QUE USUÁRIO VOLTA TODA VEZ? (motivo do loop):
+1. Dor emocional = necessidade diária:
+Situação	Por que volta?
+Ansiedade surge à noite (20h)	"Preciso de suporte emocional agora" → abre app → registra + IA ajuda
+Solidão apertada (sábado à noite)	"Estou sozinho, preciso de conforto" → abre app → diário + IA
+Reunião trabalho (10h)	"Fico nervosa antes de reunião" → abre app → exercício respiração
+Encontro Tinder (19h)	"Ansiosa antes do encontro" → abre app → exercício + validate
+2. Recompensa emocional imediata:
+Ação	Recompensa
+Registrar humor	"Entendo como estou" → validação
+Digitar diário	"Escrevo minha dor" → alívio
+IA responde	"Alguém me entende" → conexão
+Faz exercício	"Ansiedade reduz" → paz
+IA confirma	"Consegui" → sucesso
+3. Progresso mensurável (motiva continuar):
+Feature	Motivação
+Gráfico de evolução	"Vejo ansiedade diminuindo semana por semana"
+Progresso do plano	"21/21 dias = completei! Orgulho"
+Insights IA	"IA diz: 'ansiedade caiu 30% em 14 dias'" → motiva continuar
+Badges de conquistas	"10 dias consecutivos = badge! Vou continuar"
+4. Notificação push (relembrar):
+Horário	Notificação	Motivo
+08:00	"Olá Mariana! Como está seu coração hoje? 🌟"	Lembrete diário
+20:00	"Solidão apertada à noite? SoulSpace está aqui para você 💙"	Dor emocional
+Antes de encontro	"Ansiosa antes do encontro? Faça 1 exercício de respiração agora 🧘"	Dor específica
+Quando desistiu 2 dias	"Mariana, notamos que não registrou há 2 dias. Queremos você de volta! 💙"	Recuperação
+📊 LOOP DE ENGAIJAMENTO (fluxo visual):
+text
+ABRE APP
+   ↓
+REGISTRAR HUMOR (clica emoji)
+   ↓
+DIÁRIO EMOCIONAL (digita 1–3 frases)
+   ↓
+SALVAR (clica botão)
+   ↓
+IA RESPONDE (mensagem automática)
+   ↓
+FAZ EXERCÍCIO (respiração 3x, 30s)
+   ↓
+RESPOSTA IA (digita "estou mais calma")
+   ↓
+CONFIRMA IA ("você conseguiu")
+   ↓
+VOLTA NO DIA SEGUINTE (loop fecha)
+✅ RESUMO: LOOP DE ENGAJAMENTO:
+Usuário REPETE TODA VEZ: registrar humor + diário emocional + interagir com IA Coach + faz exercício rápido.
+
+Motivo de voltar: (1) dor emocional diária (ansiedade/solidão), (2) recompensa emocional imediata (validação + alívio), (3) progresso mensurável (gráficos + badges), (4) notificação push (relembrar)
+
+## Telas do MVP
+1. TELA DE BOAS-VINDAS (Welcome Screen)
+O que tem	Detalhe
+Logo SoulSpace	Coração + espaço (centro)
+Texto principal	"SoulSpace: Prepare sua alma para o relacionamento que você quer"
+Subtexto	"Diário emocional + IA Coach + Planos guiados"
+Botão	"Começar agora" (verde, grande, centro)
+2. TELA DE LOGIN/REGISTRO (Auth Screen)
+O que tem	Detalhe
+Título	"Criar sua conta"
+3 opções de login	- Continue com Google (botão)
+- Continue com Apple (botão)
+- Continue com e-mail (campo + botão)
+Link	"Já tem conta? Login" (se e-mail)
+3. TELA DE PERFIL (Profile Setup)
+O que tem	Detalhe
+Título	"Vamos conhecer você melhor"
+3 campos	- Nome (campo texto)
+- Idade (dropdown)
+- Estado (dropdown: Solteira/Casada/Divorciada)
+Campo longo	"Por que quer o SoulSpace?" (texto)
+Botão	"Continuar" (verde, fundo)
+Progresso	2 dots (2/3) no topo
+4. TELA DE OBJETIVO (Goal Selection)
+O que tem	Detalhe
+Título	"Qual seu objetivo principal?"
+4 cards de objetivo	- 💔 Superar solidão
+- 😰 Reduzir ansiedade social
+- 💪 Amar-me primeiro
+- 🧠 Inteligência emocional para relacionamentos
+Botão	"Começar meu plano" (verde, fundo)
+Progresso	3 dots (3/3) no topo
+5. TELA DE PLANO/PAGAMENTO (Subscription Screen)
+O que tem	Detalhe
+Título	"Escolha seu plano"
+Subtexto	"Plano recomendado: [objetivo escolhido] em 21 dias"
+2 opções de preço	- Mensal: R$ 39,90/mês (botão cinza)
+- Anual: R$ 299,90/ano (botão verde, destaque "7 meses grátis")
+Integração Stripe	Campo cartão, validade, CVV, checkbox renovação automática
+Botão	"Comprar agora" (verde, fundo)
+6. TELA INICIAL/DASHBOARD (Home Screen) ⭐ PRINCIPAL
+O que tem	Detalhe
+Topo	"Olá, [Nome]! Como está seu coração hoje?" + 5 emojis (😢 😐 😊 😄 🤩)
+Centro	Botão grande "Diário emocional de hoje"
+Bottom	"Seu plano: [objetivo] em [X] dias" + progresso (ex: 1/21)
+Badge	Barra abaixo: " badge de 7 dias consecutivos" (se tiver)
+Menu inferior	4 ícones: Home (ativo), Diário, IA Coach, Configurações
+7. TELA DE DIÁRIO EMOCIONAL (Journal Screen)
+O que tem	Detalhe
+Título	"O que você sente hoje?"
+Campo grande	Campo de texto (múltiplas linhas)
+Sugestão IA	"Ex: Estou ansiosa porque..." (texto cinza)
+Botão	"Salvar" (verde, fundo)
+Histórico	Abaixo: "Diários anteriores" (lista com data + 1 frase)
+8. TELA DE IA COACH (Chat AI Screen)
+O que tem	Detalhe
+Topo	"IA Coach está aqui para você" + avatar IA
+Chat	Bolhas de mensagem (IA: azul, Usuário: verde)
+Mensagem automática	IA manda: "Oi [Nome]! Vi que você está [humor]. Como posso ajudar?"
+Campo de texto	"Digite sua mensagem..." (bottom)
+Botão	"Enviar" (ícone de Klar, right)
+Sugestão rápida	3 botões abaixo: "Preciso de exercício", "Estou ansioso", "Quero conselho"
+9. TELA DE EXERCÍCIOS (Exercise Screen)
+O que tem	Detalhe
+Título	"Exercício para [objetivo]"
+Vídeo/Audio	Vídeo de 30s (respiração) ou áudio de meditação
+Instrução	"1. Inspire 4s → 2. Segure 4s → 3. Expire 6s"
+Timer	Contador 30s (progresso)
+Botão	"Completo ✓" (verde, fundo, aparece depois de 30s)
+10. TELA DE GRÁFICOS/EVOLUÇÃO (Progress Screen)
+O que tem	Detalhe
+Título	"Sua evolução emocional"
+Gráfico 1	Linha: humor semana (😢 → 😊)
+Gráfico 2	Barra: ansiedade semana (alta → baixa)
+Insight IA	"IA diz: ansiedade caiu 30% em 14 dias"
+Badge	"10 dias consecutivos!" (prêmio)
+Botão	"Continuar plano" (verde, fundo)
+11. TELA DE CONFIGURAÇÕES (Settings Screen)
+O que tem	Detalhe
+Título	"Configurações"
+Opções	- Editar perfil (nome, idade, estado)
+- Notificações (toggle)
+- Plano atual (Mensal/Anual)
+- Cancelar assinatura (botão cinza)
+- Ajuda/Contato (botão)
+- Sobre (texto)
+Logout	"Sair" (botão vermelho, fundo)
+📊 TABELA COMPLETA DE TELAS DO MVP:
+#	Tela	Essencial?	Prioridade
+1	Boas-vindas	✅ Essencial	Alta
+2	Login/Registro	✅ Essencial	Alta
+3	Perfil	✅ Essencial	Alta
+4	Objetivo	✅ Essencial	Alta
+5	Plano/Pagamento	✅ Essencial	Alta
+6	Dashboard (Home)	✅ PRINCIPAL	Máxima
+7	Diário Emocional	✅ Essencial	Alta
+8	IA Coach	✅ Essencial	Alta
+9	Exercícios	✅ Essencial	Média
+10	Gráficos/Evolução	✅ Essencial	Média
+11	Configurações	✅ Essencial	Baixa
+✅ RESUMO: TELAS PRINCIPALES DO MVP:
+SoulSpace precisa ter 11 telas:
+
+Boas-vindas (welcome)
+
+Login/Registro (auth)
+
+Perfil (perfil setup)
+
+Objetivo (goal selection)
+
+Plano/Pagamento (subscription)
+
+Dashboard/Home ⭐ (PRINCIPAL)
+
+Diário Emocional (journal)
+
+IA Coach (chat AI)
+
+Exercícios (exercise)
+
+Gráficos/Evolução (progress)
+
+Configurações (settings)
+
+## Tratamento de erros
+🔴 1. INTERNET CAI (falha de conexão)
+Situação	O que o app faz	Mensagem ao usuário
+Internet cai durante uso	App detecta automaticamente → mostra banner amarelo no topo	"Você está sem internet. Seus dados serão salvos e enviados quando voltar."
+Usuário tenta salvar diário	Salva localmente (no celular) → não perde dado	"Diário salvo no seu celular. Enviaremos quando internet voltar."
+Usuário tenta abrir IA Coach	Mostra tela de erro → não carrega chat	"IA Coach precisa de internet. Volte quando conexão voltar."
+Internet volta	App sincroniza automaticamente → dados salvos localmente vão ao Firebase	"Internet voltou! Dados sincronizados." (banner verde)
+🔴 2. DADO INVÁLIDO (campo preenchido errado)
+Situação	O que o app faz	Mensagem ao usuário
+Usuário digita nome vazio	Campo fica vermelho → botão "Continuar" não ativa	"Por favor, digite seu nome." (texto vermelho abaixo do campo)
+Usuário seleciona idade < 18	Dropdown não permite → mostra erro	"Idade mínima: 18 anos."
+Usuário digita email sem "@"	Campo fica vermelho → mostra ícone de erro	"Email inválido. Use exemplo@exemplo.com"
+Usuário tenta login com email errado	Erro no Firebase → mostra popup	"Email ou senha incorretos. Tente novamente."
+🔴 3. PAGAMENTO RECUSADO (Stripe falha)
+Situação	O que o app faz	Mensagem ao usuário
+Cartão recusado (saldo insuficiente)	Stripe retorna erro → mostra popup vermelho	"Pagamento recusado. Verifique saldo do cartão ou tente outro cartão."
+Cartão inválido (número errado)	Stripe valida → mostra erro no campo	"Número do cartão inválido. Verifique os 16 dígitos."
+CVV errado	Stripe valida → mostra erro no campo	"CVV inválido. Use 3 dígitos (lado do cartão)."
+Cartão expirado	Stripe valida → mostra erro no campo	"Cartão expirado. Use cartão atual."
+Usuário tenta outro cartão	Campo cartão limpa → usuário digita novo	"Tente outro cartão."
+Pagamento sucesso	Stripe confirma → mostra popup verde	"Pagamento processado! Bem-vinda ao SoulSpace 🎉"
+🔴 4. IA NÃO RESPONDE (OpenAI falha)
+Situação	O que o app faz	Mensagem ao usuário
+OpenAI timeout (5s sem resposta)	Chat mostra mensagem de erro	"IA demorando para responder. Tente novamente."
+OpenAI erro (500 Internal)	Chat não carrega → mostra popup	"IA temporariamente indisponível. Voltaremos em alguns minutos."
+Usuário reenvia mensagem	App tenta novamente → 3x de retry automático	(se sucesso) "IA respondeu!"
+3 retries falharem	Mostra opção "Contato humano"	"IA não está respondendo. Fale com nosso suporte: [email]"
+🔴 5. LOGIN FALHA (Firebase erro)
+Situação	O que o app faz	Mensagem ao usuário
+Email não existe	Firebase retorna erro → mostra popup	"Email não encontrado. Crie uma conta."
+Senha incorreta	Firebase valida → mostra erro no campo	"Senha incorreta. Tente novamente."
+Google/Apple login falha	Popup erro → usuário seleciona outro método	"Login Google falhou. Tente com e-mail."
+Session expirada	App força logout → volta tela login	"Sessão expirada. Faça login novamente."
+🔴 6. DIÁRIO NÃO SALVA (banco de dados erro)
+Situação	O que o app faz	Mensagem ao usuário
+Firebase erro (500)	Salva localmente (celular) → não perde dado	"Salvo no seu celular. Enviaremos quando Firebase voltar."
+Campo de texto vazio	Botão "Salvar" não ativa → mostra erro	"Por favor, digite algo no diário."
+Texto muito longo (>10.000 chars)	Limite Firebase → mostra erro	"Texto muito longo. Use até 10.000 caracteres."
+Salva sucesso	Firebase confirma → mostra popup verde	"Diário salvo! IA analisa seus padrões."
+🔴 7. NOTIFICAÇÃO PUSH NÃO ENTRA (OneSignal erro)
+Situação	O que o app faz	Mensagem ao usuário
+OneSignal falha	App não mostra erro → só não entrega notificação	(silencioso)
+Usuário desativou notificações	App detecta → mostra alerta no primeira uso	"Notificações desativadas. Ative para receber lembretes."
+Usuário ativa notificações	OneSignal atualiza → notificação funciona	"Notificações ativadas! Você receberá lembretes."
+🔴 8. APP CRASHA (erro crítico do sistema)
+Situação	O que o app faz	Mensagem ao usuário
+App fecha inesperadamente	Sentry captura erro → envia relatório	(silencioso)
+App abre de novo	Sentry detecta crash anterior → mostra popup	"App travou antes. Corrigimos o erro. Continue de onde estava."
+Usuário perde dados	Firebase restaura last save → dados voltam	"Dados restaurados! Você estava no diário de hoje."
+📊 TABELA COMPLETA DE TRATAMENTO DE ERROS:
+Erro	Detectado por	Ação do app	Mensagem ao usuário
+Internet cai	App detecta automaticamente	Salva localmente → sincroniza quando volta	"Sem internet. Dados salvos no celular."
+Dado inválido	Validação no campo	Campo fica vermelho → botão não ativa	"Campo inválido. Corrija."
+Pagamento recusado	Stripe retorna erro	Mostra popup → campo limpa	"Pagamento recusado. Tente outro cartão."
+IA não responde	OpenAI timeout/erro	3 retries automáticos → opção suporte	"IA indisponível. Suporte: [email]"
+Login falha	Firebase erro	Mostra popup → outra opção login	"Email/senha incorretos."
+Diário não salva	Firebase erro	Salva localmente → sincroniza	"Salvo no celular. Enviaremos quando voltar."
+Push não entra	OneSignal falha	Silencioso (não mostra erro)	(nenhuma)
+App crasha	Sentry captura	Restaura dados → mostra popup	"App travou. Corrigimos. Continue."
+✅ PRINCÍPIOS DE TRATAMENTO DE ERROS (profissional):
+1. Não perca dado do usuário:
+Situação	Princípio
+Internet cai	Salva localmente → não perde diário
+Firebase erro	Salva localmente → sincroniza quando volta
+App crasha	Restaura last save → não perde progresso
+2. Mensagem clara e útil:
+Mensagem ruim	Mensagem boa
+"Erro 500"	"IA temporariamente indisponível. Voltaremos em alguns minutos."
+"Pagamento falhou"	"Pagamento recusado. Verifique saldo ou tente outro cartão."
+"Campo inválido"	"Por favor, digite seu nome."
+3. Retry automático (não exige ação do usuário):
+Erro	Retry
+IA não responde	3x automáticos → se falhar, opção suporte
+Internet volta	Sincroniza automaticamente
+Firebase erro	Tenta salvar novamente 2x
+4. Opção de suporte humano:
+Situação	Suporte
+IA falha 3x	"Fale com suporte: [email]"
+Pagamento falha 3x	"Contate suporte: [email]"
+App crasha	"Reporte erro: [email]"
+🎯 FRASE-CHAVE PARA TRATAMENTO DE ERROS:
+"SoulSpace não perde dado do usuário: (1) salva localmente quando internet cai, (2) sincroniza automaticamente quando volta, (3) restaura last save quando app crasha. Mensagem sempre clara e útil, retry automático, opção de suporte humano."
+
+──────────────────────────────────────────────────
+
+# Design System — Soulspace
+
+## Estilo visual
+Minimalista e clean
+
+## Tom de comunicação
+Amigável e próximo
+
+## Referência de design
+🎨 REFERÊNCIA DE DESIGN SUGERIDA: "Calm" (app de meditação) ✅ 🎯 POR QUE "CALM" É A MELHOR REFERÊNCIA: 1. Alinha com o ESTILO VISUAL (minimalista e clean): Elemento do Calm	Como SoulSpace segue Background: branco suave (#FFFFFF)	SollSpace usa: branco suave (#FFFFFF) Primary: verde suave (#4CAF50)	SoulSpace usa: verde suave (#4CAF50) Fontes: sans-serif moderna (SF Pro)	SoulSpace usa: sans-serif moderna (Inter) Espaçamento: 20–30px padding	SoulSpace usa: 20–30px padding Ícones: line art fina (1–2px)	SoulSpace usa: line art fina (1–2px) 2. Alinha com o TOM DE COMUNICAÇÃO (amigável e próximo): Elemento do Calm	Como SoulSpace segue Tom: calmo, acolhedor, empático	SoulSpace usa: amigável, próximo, empático Pronomes: "você", "eu" (humano)	SoulSpace usa: "você", "eu", "nós" Empatia: "entendo", "calma"	SoulSpace usa: "entendo", "compreendo" Emojis: ❤️ 💙 🌟 (quentes)	SoulSpace usa: ❤️ 💙 🌟 🎉 3. Alinha com o BENEFÍCIO (saúde mental + paz interior): Benefício do Calm	Como SoulSpace segue Paz: meditação acalma	SoulSpace: diário + IA acalma Clareza: foco no conteúdo	SoulSpace: foco no diário + IA Respiro: espaço branco	SoulSpace: espaço branco, não poluído Suporte 24h: app sempre disponível	SoulSpace: IA Coach 24h sempre disponível 📊 COMPARAÇÃO: CALM vs. SOULSPACE: Elemento	Calm	SoulSpace (segue) Background	Branco suave (#FFFFFF)	Branco suave (#FFFFFF) Primary	Verde suave (#4CAF50)	Verde suave (#4CAF50) Fontes	SF Pro (iOS), Inter (Android)	Inter (universal) Espaçamento	20–30px padding	20–30px padding Ícones	Line art 1–2px	Line art 1–2px Tom	Calmo, acolhedor	Amigável, próximo Emojis	❤️ 💙 🌟	❤️ 💙 🌟 🎉 Objetivo	Meditação + paz	Diário + paz emocional 🎯 OUTRAS REFERÊNCIAS ÚTILES (secundárias): 1. Headspace (app de meditação): Elemento	Como SoulSpace segue Cores: pastéis (lilás, azul suave)	SoulSpace usa: lilás (#9B7EBD), azul suave (#4A90E2) Ilustrações: line art suave	SoulSpace usa: ilustração line art Tom: calmo, amigável	SoulSpace usa: amigável, próximo 2. Therappai (app de saúde mental com IA): Elemento	Como SoulSpace segue IA Coach: chat empático	SoulSpace usa: IA Coach 24h empático Design: clean, minimalista	SoulSpace usa: minimalista, clean Tom: acolhedor, validação	SoulSpace usa: amigável, validação 3. Notion (app de produtividade minimalista): Elemento	Como SoulSpace segue Minimalismo: foco no conteúdo	SoulSpace usa: foco no diário + IA Espaçamento: 20–30px padding	SoulSpace usa: 20–30px padding Fontes: sans-serif moderna	SoulSpace usa: sans-serif moderna ✅ RESUMO: REFERÊNCIA DE DESIGN SOULSPACE: SoulSpace deve seguir referência "Calm" (app de meditação):  Background: branco suave (#FFFFFF)  Primary: verde suave (#4CAF50)  Fontes: sans-serif moderna (Inter)  Espaçamento: 20–30px padding  Ícones: line art fina (1–2px)  Tom: amigável, próximo, empático  Emojis: ❤️ 💙 🌟 🎉  Objetivo: paz interior (Calm = meditação, SoulSpace = diário + IA)  🎨 EXEMPLO PRÁTICO: TELA INICIAL DO CALM vs. SOULSPACE: Calm (referência): text [Topo: Calm logo] [Centro: "Como está seu dia hoje?" + 5 emojis] [Botão: "Começar meditação"] [Bottom: "Seu progresso: 7 dias consecutivos"] SoulSpace (segue Calm): text [Topo: SoulSpace logo] [Centro: "Olá, Mariana! Como está seu coração hoje?" + 5 emojis] [Botão: "Diário emocional de hoje"] [Bottom: "Seu plano: Reduzir ansiedade em 21 dias (1/21)"]
+
+## Componentes essenciais
+NAVIGATION BAR (barra inferior) ⭐ OBRIGATÓRIO
+Onde aparece	O que tem
+Todas as telas principais (Dashboard, Diário, IA Coach, Gráficos)	4 ícones no bottom:
+- Home (ativo = verde)
+- Diário
+- IA Coach
+- Configurações
+Padrão	Altura 60px, background branco, ícones line art 1–2px
+2. HEADER (topo da tela) ⭐ OBRIGATÓRIO
+Onde aparece	O que tem
+Todas as telas (exceto Boas-vindas, Login, Pagamento)	- Logo SoulSpace (topo left, 24px)
+- Nickname do usuário (topo center, "Olá, Mariana!")
+- Botão perfil (topo right, ícone avatar)
+Padrão	Altura 60px, background branco, padding 20px
+3. PROGRESS DOT (dots de progresso) ⭐ COMUM
+Onde aparece	O que tem
+Telas de setup (Perfil, Objetivo, Plano)	3 dots no topo (ex: 2/3)
+- Dot ativo = verde
+- Dot inativo = cinza
+Padrão	Tamanho 8px, espaçamento 8px entre dots
+4. BOTÃO PRINCIPAL (verde grande) ⭐ COMUM
+Onde aparece	O que tem
+Todas as telas com ação (Continuar, Salvar, Comprar)	Botão verde no fundo da tela
+- Texto: "Continuar", "Salvar", "Comprar agora"
+- Altura 48px, padding 20px
+Padrão	Background verde (#4CAF50), texto branco, 8px radius
+5. CAMPO DE TEXTO (input) ⭐ COMUM
+Onde aparece	O que tem
+Telas com preenchimento (Login, Perfil, Diário, Chat)	- Campo com borda cinza fina (1px)
+- Placeholder cinza (#999999)
+- Se erro = borda vermelha (1px)
+Padrão	Altura 48px, padding 16px, 8px radius
+6. BANNER DE NOTIFICAÇÃO (topo) ⭐ COMUM
+Onde aparece	O que tem
+Quando algo acontece (internet cai, salvo, erro)	- Banner amarelo (internet) ou verde (sucesso) ou vermelho (erro)
+- Texto: 1–2 linhas
+- Altura 40px
+Padrão	Background amarelo (#FFF9C0) / verde (#C8E6C9) / vermelho (#FFEBEE), texto cinza
+7. CARD (container de conteúdo) ⭐ COMUM
+Onde aparece	O que tem
+Telas com opções (Objetivo, Planos, Exercícios)	- Card com borda cinza fina (1px)
+- Padding 20px
+- Se selecionado = borda verde
+Padrão	Background branco, 8px radius, 1px border
+8. EMOJI SELECTOR (seleção de humor) ⭐ COMUM
+Onde aparece	O que tem
+Tela Dashboard (principal)	- 5 emojis em row (😢 😐 😊 😄 🤩)
+- Se selecionado = verde (outline)
+- Tamanho 32px
+Padrão	Espaçamento 8px entre emojis, 8px radius
+9. CHAT BUBBLE (bolha de mensagem) ⭐ COMUM
+Onde aparece	O que tem
+Tela IA Coach	- Bolha IA = azul suave (#E3F2FD)
+- Bolha usuário = verde suave (#C8E6C9)
+- Padding 16px, 8px radius
+Padrão	Max width 80%, min height 40px
+10. PROGRESS BAR (barra de progresso) ⭐ COMUM
+Onde aparece	O que tem
+Telas de plano (Dashboard, Exercícios)	- Barra horizontal (ex: 1/21 dias)
+- Progresso = verde
+- Background = cinza
+Padrão	Altura 8px, 8px radius, width 100%
+📊 TABELA COMPLETA DE COMPONENTES REUTILIZÁVEIS:
+#	Componente	Onde aparece	Frequência
+1	Navigation Bar (bottom)	Todas telas principais	100%
+2	Header (topo)	Todas telas (exceto setup)	90%
+3	Botão principal (verde)	Todas telas com ação	85%
+4	Campo de texto (input)	Telas com preenchimento	80%
+5	Card (container)	Telas com opções	70%
+6	Banner de notificação	Quando algo acontece	60%
+7	Progress Bar	Telas de plano	50%
+8	Emoji Selector	Dashboard	40%
+9	Chat Bubble	IA Coach	30%
+10	Progress Dot	Telas de setup	20%
+✅ RESUMO: COMPONENTES DE UI REUTILIZÁVEIS:
+SoulSpace usa 10 componentes que aparecem em quase toda tela:
+
+Navigation Bar (bottom, 4 ícones)
+
+Header (topo, logo + nome + avatar)
+
+Botão principal (verde grande, fundo)
+
+Campo de texto (input, borda cinza)
+
+Card (container, borda cinza)
+
+Banner de notificação (topo, amarelo/verde/vermelho)
+
+Progress Bar (horizontal, verde/cinza)
+
+Emoji Selector (5 emojis, verde quando selecionado)
+
+Chat Bubble (IA=azul, usuário=verde)
+
+Progress Dot (3 dots, verde quando ativo)
+
+
+
+## Diferencial visual
+DIFERENCIAL VISUAL SUGERIDO: "Cores que mudam conforme humor do usuário" ✅ 🎯 O QUE É: O app muda automaticamente a paleta de cores (background, primary, accent) dependendo do humor que usuário registra no diário emocional.  📊 COMO FUNCIONA (exemplo prático): Humor registrado	Cor do app	Por que? 😢 triste/triste	Azul suave (#BBDEFB) + cinza claro	Azul = calma, acalma user triste 😐 neutro	Branco suave (#FFFFFF) + cinza médio	Clean = respiro, normal 😊 feliz	Verde suave (#C8E6C9) + verde primary	Verde = crescimento, celebra 😄 muito feliz	Lilás suave (#E1BEE7) + lilás primary	Lilás = energia positiva, celebra 🤩 eufórico	Coral suave (#FFCCBC) + coral primary	Coral = explosão, celebra euforia 🎯 POR QUE ISSO É DIFERENCIAL: 1. ÚNICO (nobody faz isso): App	Faz mudança de cor? Calm	❌ Não (cores fixas) Headspace	❌ Não (cores fixas) Therappai	❌ Não (cores fixas) Notion	❌ Não (cores fixas) SoulSpace	✅ SIM (cores mudam conforme humor) 2. PERSONALIZADO (sente que app é "para você"): Situação	User pensa Registra "triste" → app fica azul	"App entende que estou triste e me acalma" Registra "feliz" → app fica verde	"App celebra minha felicidade com mim" Registra "eufórico" → app fica coral	"App acelera comigo quando estou eufórico" 3. EMOCIONAL (conexão profunda): Elemento	Emoção Cor muda	"App é vivo, responde a mim" Transição suave	"App é acolhedor, não agressivo" Cor personal	"App é meu, não genérico" 4. MEMORÁVEL (user pensa "esse app tem cara"): Situação	User pensa Abre app azul (triste)	"Ah, SoulSpace fica azul quando estou triste → app tem cara" Abre app verde (feliz)	"SoulSpace fica verde quando estou feliz → app me entende" Mostra a amigo	"Olha, app muda cor conforme meu humor → único!" 🎨 DETALHES DE IMPLEMENTAÇÃO: 1. ANIMAÇÃO DE TRANSIÇÃO: Elemento	Como Quando muda cor	Transição suave 300ms (fade) Nada brusco	Cor não "pula", muda gradualmente Smooth	User sente "contínuo", não "cortado" 2. MUDANÇA APLICADA: Elemento	Muda? Background	✅ Sim (todo app) Primary color	✅ Sim (botões, ícones) Accent color	✅ Sim (cards, badges) Text color	⚠️ Não (mantém cinza para legibilidade) Icons	✅ Sim (line art muda cor) 3. PERSONALIZAÇÃO AVANÇADA: Opção	Como User pode escolher	"Quero sempre verde" (ignora humor) User pode ajustar	"Quero azul mais suave" (customiza paleta) User pode desativar	"Não quero cor muda" (fixa) 📊 EXEMPLO VISUAL (mockup): Tela Dashboard (humor: 😐 neutro): text [Background: branco suave #FFFFFF] [Header: "Olá, Mariana! Como está seu coração hoje?"] [Emojis: 😢 😐 😊 😄 🤩 → 😐 selecionado = verde outline] [Botão: "Diário emocional de hoje" → verde #4CAF50] [Bottom: "Seu plano: 1/21" → barra verde #4CAF50] Tela Dashboard (humor: 😢 triste → cor muda): text [Background: azul suave #BBDEFB ← MUDANÇA] [Header: "Olá, Mariana! Como está seu coração hoje?"] [Emojis: 😢 😐 😊 😄 🤩 → 😢 selecionado = azul outline ← MUDANÇA] [Botão: "Diário emocional de hoje" → azul #4A90E2 ← MUDANÇA] [Bottom: "Seu plano: 1/21" → barra azul #4A90E2 ← MUDANÇA] 🎯 POR QUE USER PENSARÁ "ESSE APP TEM CARA": Motivo	Por que? App responde a mim	"App é vivo, não robótico" Cor personal	"App é meu, não genérico" Transição suave	"App é acolhedor, não agressivo" Único no mercado	"Nenhum app faz isso → SoulSpace é diferente" ✅ RESUMO: DIFERENCIAL VISUAL SOULSPACE: SoulSpace tem diferencial visual: "Cores que mudam conforme humor do usuário"  Triste: azul suave (#BBDEFB)  Neutro: branco suave (#FFFFFF)  Feliz: verde suave (#C8E6C9)  Muito feliz: lilás suave (#E1BEE7)  Eufórico: coral suave (#FFCCBC)  Transição: suave 300ms (fade)  Aplicado: background, primary, accent, icons  Personalização: user pode escolher/desativar  🎨 OUTROS DIFERENCIALES VISUALES (alternativas): 2. Tipografia incomum (fontes handwriting): Elemento	Como Títulos	Fonte handwriting (ex: "Pacifico") Texto	Mantém sans-serif (legibilidade) Por que?	"Handwriting = pessoal, como diário real" 3. Animações fluidas (microinterações): Elemento	Como Botão clicado	Scale 0.95 → 1 (bounce) Card selecionado	Scale 1.05 (elevação) Emoji selecionado	Rotate 10° (celebra) Por que?	"App é vivo, reage a mim" 4. Layout diferente (cards sobrepostos): Elemento	Como Cards	Sobrepostos 10px (depth) Background	Blur quando card sobreposto Por que?	"App é moderno, não plano" Resumo  FINAL: Diferencial principal: "Cores que mudam conforme humor" (único, emocional, memorável) Diferencial secundário: "Animações fluidas" (microinterações, app vivo)
+
+──────────────────────────────────────────────────
+
+# Backend Schema — Soulspace
+
+## Entidades do banco de dados
+1. USER (Usuário) ⭐ OBRIGATÓRIO
+Campo	Tipo	Descrição
+id	UUID	ID único do usuário
+email	String	Email de login
+name	String	Nome do usuário
+age	Integer	Idade
+status	String	Estado (solteira/casada/divorciada)
+goal	String	Objetivo principal (ex: "Reduzir ansiedade social")
+created_at	Timestamp	Quando criou conta
+subscription_plan	String	Plano (mensal/anual)
+subscription_status	String	Status (ativo/cancelado)
+2. JOURNAL_ENTRY (Diário Emocional) ⭐ OBRIGATÓRIO
+Campo	Tipo	Descrição
+id	UUID	ID único do diário
+user_id	UUID (FK)	ID do usuário (relaciona com User)
+mood	String	Humor (😢😐😊😄🤩)
+text	Text	Texto do diário (1–3 frases)
+anxiety_level	Integer	Nível de ansiedade (1–10)
+created_at	Timestamp	Quando criou diário
+*		
+3. AI_CHAT_MESSAGE (Mensagem IA Coach) ⭐ OBRIGATÓRIO
+Campo	Tipo	Descrição
+id	UUID	ID único da mensagem
+user_id	UUID (FK)	ID do usuário
+message_from	String	De quem: "user" ou "ai"
+text	Text	Texto da mensagem
+exercise_suggested	String	Exercício sugerido (ex: "respiração 30s")
+created_at	Timestamp	Quando criou mensagem
+4. PLAN (Plano Guiado) ⭐ OBRIGATÓRIO
+Campo	Tipo	Descrição
+id	UUID	ID único do plano
+user_id	UUID (FK)	ID do usuário
+goal	String	Objetivo (ex: "Reduzir ansiedade em 21 dias")
+total_days	Integer	Total de dias (ex: 21)
+current_day	Integer	Dia atual (ex: 1)
+started_at	Timestamp	Quando começou plano
+completed_at	Timestamp	Quando completou (se completado)
+status	String	Status (ativo/completado/pausado)
+5. PLAN_EXERCISE (Exercício do Plano) ⭐ OBRIGATÓRIO
+Campo	Tipo	Descrição
+id	UUID	ID único do exercício
+plan_id	UUID (FK)	ID do plano (relaciona com Plan)
+day	Integer	Dia do exercício (ex: 1, 2, 3)
+exercise_type	String	Tipo (ex: "respiração", "meditação", "diário")
+duration_seconds	Integer	Duração (ex: 30, 60, 120)
+completed	Boolean	Se completado (true/false)
+completed_at	Timestamp	Quando completou
+6. INSIGHT (Insight IA) ⭐ OBRIGATÓRIO
+Campo	Tipo	Descrição
+id	UUID	ID único do insight
+user_id	UUID (FK)	ID do usuário
+text	Text	Texto do insight (ex: "Ansiedade caiu 30% em 14 dias")
+category	String	Categoria (ex: "ansiedade", "humor", "padrões")
+created_at	Timestamp	Quando criou insight
+7. BADGE (Badge de Conquista) ⭐ COMUM
+Campo	Tipo	Descrição
+id	UUID	ID único da badge
+user_id	UUID (FK)	ID do usuário
+name	String	Nome (ex: "7 dias consecutivos")
+description	String	Descrição (ex: "Você registr
+8. SUBSCRIPTION (Subscrição) ⭐ OBRIGATÓRIO
+Campo	Tipo	Descrição
+id	UUID	ID único da subscrição
+user_id	UUID (FK)	ID do usuário
+plan_type	String	Tipo (mensal/anual)
+price	Decimal	Preço (ex: 39.90, 299.90)
+start_date	Date	Quando começou
+end_date	Date	Quando termina
+status	String	Status (ativo/cancelado/expirado)
+stripe_subscription_id	String	ID Stripe (para renovação)
+📊 TABELA COMPLETA DE OBJETOS DO BANCO DE DADOS:
+#	Objeto	Quantidade no MVP	Prioridade
+1	User	1 tabela	✅ Obrigatória
+2	Journal_Entry	1 tabela	✅ Obrigatória
+3	AI_Chat_Message	1 tabela	✅ Obrigatória
+4	Plan	1 tabela	✅ Obrigatória
+5	Plan_Exercise	1 tabela	✅ Obrigatória
+6	Insight	1 tabela	✅ Obrigatória
+7	Badge	1 tabela	✅ Comum
+8	Subscription	1 tabela	✅ Obrigatória
+TOTAL	—	8 tabelas	—
+🎯 RELACIONAMENTOS ENTRE OBJETOS:
+text
+USER (1) ────< JOURNAL_ENTRY (N)
+  │
+  ├───< AI_CHAT_MESSAGE (N)
+  │
+  ├───< PLAN (N)
+  │       │
+  │       └───< PLAN_EXERCISE (N)
+  │
+  ├───< INSIGHT (N)
+  │
+  ├───< BADGE (N)
+  │
+  └───< SUBSCRIPTION (1)
+✅ RESUMO: OBJETOS PRINCIPALES DO BANCO DE DADOS:
+SoulSpace tem 8 objetos principais:
+
+User (usuário: nome, email, idade, estado, objetivo)
+
+Journal_Entry (diário emocional: humor, texto, ansiedade)
+
+AI_Chat_Message (mensagens IA Coach: de user/IA, texto, exercício)
+
+Plan (plano guiado: objetivo, dias totais, dia atual, status)
+
+Plan_Exercise (exercício do plano: dia, tipo, duração, completado)
+
+Insight (insight IA: texto, categoria, quando criado)
+
+Badge (badge de conquista: nome, descrição, quando ganhou)
+
+Subscription (subscrição: tipo, preço, start/end, status, Stripe ID)
+
+
+
+## Autenticação
+Google + Apple
+
+## Storage (arquivos e imagens)
+Não, só texto e dados
+
+## Notificações
+Email
+
+## Banco de dados
+Não sei ainda
+
+──────────────────────────────────────────────────
+
+# Game Plan — Soulspace
+
+## MVP (versão mínima viável)
+FUNCIONALIDADES QUE ENTRANO MVP (essenciales):
+1. Diário Emocional (feature principal)
+O que tem	Por que é essencial
+Registrar humor (5 emojis)	User registra estado emocional
+Digitar diário (1–3 frases)	User expressa dor
+Salvar diário	User não perde dado
+Não tem:	histórico longo, gráficos avançados, exportação
+2. IA Coach Básico (feature principal)
+O que tem	Por que é essencial
+Chat 24h com IA	User tem suporte emocional
+IA responde baseado no diário	IA entende contexto
+IA sugere 1 exercício (respiração 30s)	User reduz ansiedade
+Não tem:	múltiplos exercícios, vídeos longos, personalização avançada
+3. Plano Guiado Básico (feature principal)
+O que tem	Por que é essencial
+1 plano disponível ("Reduzir ansiedade em 21 dias")	User tem rota de evolução
+Progresso (1/21, 2/21, ...)	User vê evolução
+1 exercício por dia (respiração 30s)	User faz prática diária
+Não tem:	múltiplos planos, exercícios variados, badges
+4. Pagamento Recorrente (obrigatório)
+O que tem	Por que é essencial
+2 opções: Mensal (R$ 39,90) + Anual (R$ 299,90)	User subscribe
+Stripe integra	Processa pagamento
+Renovação automática	User continua pagando
+Não tem:	trial gratuito, promoções, múltiplos preços
+5. Login Básico (obrigatório)
+O que tem	Por que é essencial
+Login Google + Apple	User cria conta rápido
+Salva dados no Firebase	User não perde progresso
+Não tem:	login e-mail, recuperação de senha, 2FA
+❌ O QUE NÃO ENTRA NO MVP (cortado):
+1. Gráficos de Evolução (feature secundária):
+O que seria	Por que NÃO entra
+Gráfico humor semana	✅ MVP tem: só diário + IA
+Gráfico ansiedade semana	✅ MVP tem: só registrar ansiedade
+Insights IA avançados	✅ MVP tem: só IA sugere 1 exercício
+2. Múltiplos Planos (feature secundária):
+O que seria	Por que NÃO entra
+"Superar solidão em 14 dias"	✅ MVP tem: só 1 plano
+"Amar-me primeiro em 7 dias"	✅ MVP tem: só 1 plano
+"Inteligência emocional 30 dias"	✅ MVP tem: só 1 plano
+3. Badges de Conquista (feature secundária):
+O que seria	Por que NÃO entra
+"7 dias consecutivos"	✅ MVP tem: só progresso
+"10 diários salvos"	✅ MVP tem: só salvar diário
+"1º exercício completo"	✅ MVP tem: só 1 exercício
+4. Comunidade Moderada (feature secundária):
+O que seria	Por que NÃO entra
+Grupo de solteiros	✅ MVP tem: só IA Coach (não humano)
+Eventos de solteiros	✅ MVP tem: só exercícios individuais
+Chat entre usuários	✅ MVP tem: só chat com IA
+5. Integração Saúde (feature secundária):
+O que seria	Por que NÃO entra
+Apple Health Kit	✅ MVP tem: só diário + IA
+Google Fit	✅ MVP tem: só diário + IA
+Passos + sono + humor	✅ MVP tem: só humor + ansiedade
+6. Notificações Push Avançadas (feature secundária):
+O que seria	Por que NÃO entra
+Lembrete 8h	✅ MVP tem: só notificação básica
+Lembrete 20h	✅ MVP tem: só notificação básica
+Recuperação desativado	✅ MVP tem: só notificação básica
+7. Configurações Avançadas (feature secundária):
+O que seria	Por que NÃO entra
+Editar perfil completo	✅ MVP tem: só nome, idade, estado
+Notificações toggle	✅ MVP tem: só notificação ativa
+Cor personalizável	✅ MVP tem: só cor muda conforme humor
+Exportar dados	✅ MVP tem: só salva no Firebase
+8. Analytics do Usuário (feature secundária):
+O que seria	Por que NÃO entra
+Dashboard de uso	✅ MVP tem: só diário + IA
+Tempo de uso	✅ MVP tem: só diário + IA
+Frequência de uso	✅ MVP tem: só diário + IA
+📊 TABELA COMPLETA: MVP vs. NÃO MVP:
+Feature	MVP?	Por que?
+Diário Emocional	✅ ENTRA	Essencial: user registra humor + texto
+IA Coach 24h	✅ ENTRA	Essencial: user tem suporte emocional
+Plano Guiado (1 só)	✅ ENTRA	Essencial: user tem rota de evolução
+Pagamento Recorrente	✅ ENTRA	Obrigatório: app precisa de receita
+Login Google/Apple	✅ ENTRA	Obrigatório: user cria conta
+Gráficos de Evolução	❌ NÃO	Secundária: MVP tem só diário
+Múltiplos Planos	❌ NÃO	Secundária: MVP tem só 1 plano
+Badges de Conquista	❌ NÃO	Secundária: MVP tem só progresso
+Comunidade Moderada	❌ NÃO	Secundária: MVP tem só IA
+Integração Saúde	❌ NÃO	Secundária: MVP tem só diário + IA
+Notificações Avançadas	❌ NÃO	Secundária: MVP tem só básico
+Configurações Avançadas	❌ NÃO	Secundária: MVP tem só básico
+Analytics Usuário	❌ NÃO	Secundária: MVP tem só diário + IA
+✅ RESUMO: O QUE ENTRA NO MVP:
+SoulSpace MVP tem 5 funcionalidades essenciais:
+
+Diário Emocional (humor + texto + salvar)
+
+IA Coach 24h (chat + responde diário + sugere 1 exercício)
+
+Plano Guiado (1 só) ("Reduzir ansiedade em 21 dias" + progresso + 1 exercício/dia)
+
+Pagamento Recorrente (mensal R$ 39,90 + anual R$ 299,90 + Stripe)
+
+Login Google/Apple (cria conta + salva no Firebase)
+
+❌ RESUMO: O QUE NÃO ENTRA NO MVP:
+SoulSpace NÃO tem (cortado):
+
+Gráficos de evolução
+
+Múltiplos planos
+
+Badges de conquista
+
+Comunidade moderada
+
+Integração saúde
+
+Notificações avançadas
+
+Configurações avançadas
+
+Analytics do usuário
+
+🎯 POR QUE ESTE É O MVP PERFEITO:
+Critério	MVP atinge?
+Valor real	✅ User registra diário + IA ajuda + plano evolui
+Simples	✅ 5 funcionalidades, 8 tabelas, 11 telas
+Rapido	✅ 3–4 meses de desenvolvimento
+Custo baixo	✅ R$ 4.200–7.500/mês (integrações)
+Escalavel	✅ MVP válido → depois adiciona features
+
+## Prazo de lançamento
+1 mês
+
+## Quem vai construir
+Eu + 1 desenvolvedor
+
+## Principal risco
+Dificuldade de convencer os primeiros usuarios pagantes, pois a divulgacao sera feita via facebook / instagram (trafego pago), porem num nicho que tem procura.
+
+## Modelo de monetização
+Assinatura mensal
