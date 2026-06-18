@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  /* Espinha da marca — constante, independente do humor. */
+  --brand: #6d28d9;
+  --brand-strong: #5b21b6;
+  /* Acentos mood-reativos (default = neutro; o AppFrame sobrescreve). */
+  --color-primary: #0ea47e;
+  --color-primary-strong: #0b8466;
+  --color-primary-soft: #d2f5eb;
+  --color-bar: #12b58c;
+  --aura-from: #10b981;
+  --aura-to: #14b8a6;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fbf7ff;
+  font-family: 'Nunito', ui-rounded, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #1e1b2e;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Foco de teclado visível e consistente, sempre na cor da marca. */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2.5px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+::selection {
+  background: #ede9fe;
+  color: #4c1d95;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* A aura diagonal viva dos headers (135°, deslizando lentamente). */
+.aura-gradient {
+  background-image: linear-gradient(135deg, var(--aura-from) 0%, var(--aura-to) 100%);
+  background-size: 160% 160%;
+}
+
+/* Slider de ansiedade: trilha verde→amarelo→vermelho (escala emocional). */
+.anxiety-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #10b981 0%, #f5a524 50%, #ef4444 100%);
+  outline-offset: 4px;
+}
+.anxiety-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 3px solid var(--thumb, #f5a524);
+  box-shadow: 0 4px 12px -2px rgba(30, 27, 46, 0.35);
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+.anxiety-range::-webkit-slider-thumb:active {
+  transform: scale(1.12);
+}
+.anxiety-range::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 3px solid var(--thumb, #f5a524);
+  box-shadow: 0 4px 12px -2px rgba(30, 27, 46, 0.35);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Congela a respiração da aura num estado neutro estável. */
+  .animate-breathe {
+    opacity: 0.6 !important;
+    transform: none !important;
+  }
+}
