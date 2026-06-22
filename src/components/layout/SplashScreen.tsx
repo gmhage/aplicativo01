@@ -37,7 +37,9 @@ export function SplashScreen() {
       />
 
       {/* Trilha de carregamento — preenche da esquerda à direita uma vez,
-          ecoando o caminho verde→coral do símbolo. */}
+          ecoando o caminho verde→coral do símbolo. A duração acompanha o tempo
+          mínimo da splash (~4s, ver SPLASH_MIN_MS), para a barra encher durante
+          toda a abertura e não terminar antes da hora. */}
       <div className="relative mt-10 h-[3px] w-[140px] overflow-hidden rounded-full bg-grape/10">
         <motion.div
           className="h-full rounded-full"
@@ -46,7 +48,7 @@ export function SplashScreen() {
           }}
           initial={{ width: reduce ? '100%' : '0%' }}
           animate={{ width: '100%' }}
-          transition={reduce ? { duration: 0 } : { duration: 1.6, ease: 'easeInOut' }}
+          transition={reduce ? { duration: 0 } : { duration: 3.8, ease: 'easeInOut' }}
         />
       </div>
     </div>

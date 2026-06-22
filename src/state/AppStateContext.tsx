@@ -129,6 +129,10 @@ function storeTodayMood(userId: string, mood: MoodId) {
   }
 }
 
+// Tempo mínimo (ms) que a tela de abertura (SplashScreen) fica visível, para a
+// marca e a barra de carregamento aparecerem mesmo quando o app sobe instantâneo.
+const SPLASH_MIN_MS = 4000
+
 export function AppStateProvider({ children }: { children: ReactNode }) {
   const [view, setView] = useState<View>('welcome')
   const [bootstrapping, setBootstrapping] = useState(true)
@@ -190,6 +194,10 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     let isMounted = true
     ;(async () => {
+      // Splash de marca: garante um tempo MÍNIMO em tela (mesmo quando a sessão
+      // carrega num piscar), para a abertura e a barra de carregamento serem
+      // vistas. Se o carregamento real demorar mais que isso, não atrasamos além.
+      const startedAt = Date.now()
       const hadCrash = consumeCrashFlag()
       try {
         const existing = await authService.getCurrentUser()
@@ -205,7 +213,11 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       } catch {
         // sem sessão anterior válida — fica na tela de boas-vindas
       } finally {
-        if (isMounted) setBootstrapping(false)
+        const elapsed = Date.now() - startedAt
+        const remaining = Math.max(0, SPLASH_MIN_MS - elapsed)
+        setTimeout(() => {
+          if (isMounted) setBootstrapping(false)
+        }, remaining)
       }
     })()
     return () => {
