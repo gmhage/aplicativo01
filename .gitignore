@@ -13,5 +13,13 @@ yarn-error.log*
 # parte do código do app.
 .claude/
 
+# Variáveis de ambiente — NUNCA versionar (contêm URLs/segredos do projeto).
+# A chave da Anthropic NÃO mora aqui: ela fica nas Environment Variables do
+# Vercel (servidor). No .env do front só vai a VITE_AI_BACKEND_URL (a URL da
+# sua função, que não é segredo). Ver .env.example e INTEGRACAO_IA.md.
+.env
+.env.local
+.env*.local
+
 # Arquivos temporários/locais
 list_local.txt

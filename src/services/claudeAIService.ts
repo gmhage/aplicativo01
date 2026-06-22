@@ -12,11 +12,17 @@ import type { MoodId } from '../types'
 // ClaudeService — adaptador de IA real (Claude Haiku 4.5) com fallback local.
 //
 // COMO FUNCIONA
-//   Este serviço é um "envelope" sobre o mockAIService. Ele tenta gerar a
-//   reflexão do dia chamando a IA real; se a IA não estiver configurada ou
+//   Este serviço é um "envelope" sobre o mockAIService. Ele tenta gerar texto
+//   chamando a IA real (backend seguro); se a IA não estiver configurada ou
 //   falhar, ele cai automaticamente no banco local de variações (mockAIService).
-//   Os demais métodos (saudação, resposta do chat, resumo da evolução) continuam
-//   vindo do mock — só a positiveReflection ganha IA real.
+//   Métodos com IA real: positiveReflection (reflexão do dia), reply (chat da IA
+//   Coach) e evolutionSummary (resumo da evolução). A saudação (greetingForMood)
+//   continua vindo do mock — é instantânea e não precisa de IA.
+//
+//   No chat (reply), a IA gera só o TEXTO da conversa. A decisão de sugerir
+//   exercício/respiração (exerciseSuggested) continua sendo do código do app
+//   (ver AppStateContext.sendChatMessage), então o backend devolve sempre null
+//   nesse campo — o fluxo de exercícios existente não muda.
 //
 // SEGURANÇA (regra de ouro do postmortem fitgym.site)
 //   A CHAVE DA API NUNCA FICA NO FRONT-END. Qualquer coisa no navegador é
@@ -60,46 +66,95 @@ function buildReflectionPayload(request: PositiveReflectionRequest) {
   }
 }
 
-async function fetchReflectionFromBackend(
-  request: PositiveReflectionRequest,
-): Promise<{ paragraphs: string[] }> {
+// Helper genérico: POST numa rota do backend com timeout. Devolve o JSON cru.
+async function postToBackend(route: string, payload: unknown): Promise<unknown> {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
   try {
-    const response = await fetch(`${BACKEND_URL}/reflection`, {
+    const response = await fetch(`${BACKEND_URL}/${route}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(buildReflectionPayload(request)),
+      body: JSON.stringify(payload),
       signal: controller.signal,
     })
     if (!response.ok) throw new Error(`backend_status_${response.status}`)
-    const data = (await response.json()) as { paragraphs?: unknown }
-    // Validação defensiva: só aceitamos um array de strings não vazio.
-    if (
-      Array.isArray(data.paragraphs) &&
-      data.paragraphs.length > 0 &&
-      data.paragraphs.every((p) => typeof p === 'string' && p.trim().length > 0)
-    ) {
-      return { paragraphs: data.paragraphs as string[] }
-    }
-    throw new Error('backend_invalid_shape')
+    return await response.json()
   } finally {
     clearTimeout(timeout)
   }
 }
 
+async function fetchReflectionFromBackend(
+  request: PositiveReflectionRequest,
+): Promise<{ paragraphs: string[] }> {
+  const data = (await postToBackend('reflection', buildReflectionPayload(request))) as {
+    paragraphs?: unknown
+  }
+  // Validação defensiva: só aceitamos um array de strings não vazio.
+  if (
+    Array.isArray(data.paragraphs) &&
+    data.paragraphs.length > 0 &&
+    data.paragraphs.every((p) => typeof p === 'string' && p.trim().length > 0)
+  ) {
+    return { paragraphs: data.paragraphs as string[] }
+  }
+  throw new Error('backend_invalid_shape')
+}
+
 class ClaudeAIService implements AIService {
-  // Estes três delegam ao mock — não precisam de IA real por enquanto.
+  // Saudação delega ao mock — é instantânea e não precisa de IA real.
   greetingForMood(userName: string, mood: MoodId, anxietyLevel: number): string {
     return mockAIService.greetingForMood(userName, mood, anxietyLevel)
   }
 
-  reply(request: AIReplyRequest): ReturnType<AIService['reply']> {
-    return mockAIService.reply(request)
+  // Chat da IA Coach: tenta a IA real; se desligada ou com erro, usa o mock.
+  // A IA gera só o TEXTO — o exerciseSuggested vem sempre null do backend, pois
+  // a decisão de sugerir exercício/respiração é do código (AppStateContext).
+  async reply(request: AIReplyRequest): Promise<{ text: string; exerciseSuggested: string | null }> {
+    if (!BACKEND_URL) {
+      return mockAIService.reply(request)
+    }
+    try {
+      const data = (await postToBackend('chat', {
+        userName: request.userName,
+        mood: request.mood,
+        anxietyLevel: request.anxietyLevel,
+        journalText: request.journalText,
+        // Manda só o essencial do histórico (texto + autor) — sem ids/datas.
+        history: request.history.map((m) => ({ messageFrom: m.messageFrom, text: m.text })),
+        userMessage: request.userMessage,
+        challengeId: request.challengeId,
+        lifeStage: request.lifeStage,
+      })) as { text?: unknown }
+      if (typeof data.text === 'string' && data.text.trim().length > 0) {
+        return { text: data.text, exerciseSuggested: null }
+      }
+      throw new Error('backend_invalid_shape')
+    } catch (error) {
+      if (import.meta.env.DEV) {
+        console.warn('[ClaudeService] chat indisponível, usando banco local:', error)
+      }
+      return mockAIService.reply(request)
+    }
   }
 
-  evolutionSummary(points: EvolutionSummaryPoint[]): ReturnType<AIService['evolutionSummary']> {
-    return mockAIService.evolutionSummary(points)
+  // Resumo da evolução: tenta a IA real; se desligada ou com erro, usa o mock.
+  async evolutionSummary(points: EvolutionSummaryPoint[]): Promise<{ text: string }> {
+    if (!BACKEND_URL) {
+      return mockAIService.evolutionSummary(points)
+    }
+    try {
+      const data = (await postToBackend('evolution-summary', { points })) as { text?: unknown }
+      if (typeof data.text === 'string' && data.text.trim().length > 0) {
+        return { text: data.text }
+      }
+      throw new Error('backend_invalid_shape')
+    } catch (error) {
+      if (import.meta.env.DEV) {
+        console.warn('[ClaudeService] resumo indisponível, usando banco local:', error)
+      }
+      return mockAIService.evolutionSummary(points)
+    }
   }
 
   // A reflexão do dia: tenta a IA real; se desligada ou com erro, usa o mock.
@@ -126,7 +181,17 @@ export const claudeAIService = new ClaudeAIService()
 // ─────────────────────────────────────────────────────────────────────────────
 // COMO ATIVAR (quando você decidir plugar a IA de verdade)
 //
-// 1) Suba um backend com UMA rota POST /reflection. Exemplo de Edge Function
+// O backend já está escrito em api/ai.ts (Vercel Function, 3 rotas: /reflection,
+// /chat, /evolution-summary). Passos rápidos — detalhes em INTEGRACAO_IA.md:
+//   1) npm i @anthropic-ai/sdk
+//   2) No Vercel: Settings → Environment Variables → ANTHROPIC_API_KEY = sk-ant-...
+//   3) Crie .env com: VITE_AI_BACKEND_URL=https://SEU-APP.vercel.app/api/ai
+//   4) Em src/services/index.ts troque mockAIService por claudeAIService.
+// Sem a env var, tudo se comporta como o mock (custo zero, nada quebra).
+//
+// Referência do backend (o api/ai.ts já implementa isto; mantido aqui como nota):
+//
+// 1) Cada rota POST chama o Claude Haiku 4.5. Exemplo de Edge Function
 //    (Supabase / Vercel / Netlify Functions). A chave fica SÓ aqui, no servidor.
 //    Modelo: claude-haiku-4-5 (rápido, acolhedor e barato para texto curto).
 //    Cache de prompt: o bloco de instrução (system) é fixo e marcado com
