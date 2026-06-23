@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { AppFrame } from './components/layout/AppFrame'
 import { BottomNav } from './components/layout/BottomNav'
 import { SplashScreen } from './components/layout/SplashScreen'
@@ -6,6 +7,8 @@ import { ReportProblem, SCREEN_LABELS } from './components/ui/ReportProblem'
 import { AppStateProvider, useAppState } from './state/AppStateContext'
 import { AICoachScreen } from './screens/AICoachScreen'
 import { AuthScreen } from './screens/AuthScreen'
+import { ConnectionUpsellScreen } from './screens/ConnectionUpsellScreen'
+import { PracticeScreen } from './screens/PracticeScreen'
 import { DashboardScreen } from './screens/DashboardScreen'
 import { EvolutionScreen } from './screens/EvolutionScreen'
 import { ExerciseScreen } from './screens/ExerciseScreen'
@@ -24,6 +27,12 @@ const SCREENS_WITH_REPORT = new Set(['dashboard', 'journal', 'aiCoach', 'evoluti
 function Shell() {
   const { view, mood, banner, dismissBanner, navigate, bootstrapping, user } = useAppState()
   const firstName = user?.name?.trim().split(' ')[0] || undefined
+
+  // Ao trocar de tela, volta o scroll para o topo — sem isso a tela nova herda a
+  // posição de rolagem da anterior (ex.: o upsell abria já no meio).
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [view])
 
   if (bootstrapping) {
     return <SplashScreen />
@@ -53,6 +62,10 @@ function Shell() {
         return <ExerciseScreen />
       case 'settings':
         return <SettingsScreen />
+      case 'connectionUpsell':
+        return <ConnectionUpsellScreen />
+      case 'practice':
+        return <PracticeScreen />
       default:
         return <WelcomeScreen />
     }

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import type { MouseEventHandler, ReactNode } from 'react'
+import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 
 type Variant = 'primary' | 'secondary' | 'ghost' | 'danger'
 
@@ -9,6 +9,7 @@ interface ButtonProps {
   icon?: ReactNode
   loading?: boolean
   className?: string
+  style?: CSSProperties
   type?: 'button' | 'submit'
   disabled?: boolean
   onClick?: MouseEventHandler<HTMLButtonElement>

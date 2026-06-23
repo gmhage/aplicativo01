@@ -5,6 +5,8 @@ import type {
   AIService,
   EvolutionSummaryPoint,
   PositiveReflectionRequest,
+  PracticeFeedbackRequest,
+  PracticeReplyRequest,
 } from './types'
 import type { MoodId } from '../types'
 
@@ -172,6 +174,45 @@ class ClaudeAIService implements AIService {
         console.warn('[ClaudeService] IA indisponível, usando banco local:', error)
       }
       return mockAIService.positiveReflection(request)
+    }
+  }
+
+  // Treino de conversa — a IA atua NO PAPEL do cenário. Tenta a IA real; se
+  // desligada ou com erro, usa o mock (conversa simulada, custo zero).
+  async practiceReply(request: PracticeReplyRequest): Promise<{ text: string }> {
+    if (!BACKEND_URL) {
+      return mockAIService.practiceReply(request)
+    }
+    try {
+      const data = (await postToBackend('practice-reply', request)) as { text?: unknown }
+      if (typeof data.text === 'string' && data.text.trim().length > 0) {
+        return { text: data.text }
+      }
+      throw new Error('backend_invalid_shape')
+    } catch (error) {
+      if (import.meta.env.DEV) {
+        console.warn('[ClaudeService] treino indisponível, usando banco local:', error)
+      }
+      return mockAIService.practiceReply(request)
+    }
+  }
+
+  // Feedback do treino — a IA analisa a conversa. Mesmo padrão de fallback.
+  async practiceFeedback(request: PracticeFeedbackRequest): Promise<{ text: string }> {
+    if (!BACKEND_URL) {
+      return mockAIService.practiceFeedback(request)
+    }
+    try {
+      const data = (await postToBackend('practice-feedback', request)) as { text?: unknown }
+      if (typeof data.text === 'string' && data.text.trim().length > 0) {
+        return { text: data.text }
+      }
+      throw new Error('backend_invalid_shape')
+    } catch (error) {
+      if (import.meta.env.DEV) {
+        console.warn('[ClaudeService] feedback indisponível, usando banco local:', error)
+      }
+      return mockAIService.practiceFeedback(request)
     }
   }
 }

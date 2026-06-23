@@ -14,7 +14,7 @@ import { useAppState } from '../state/AppStateContext'
 import { PlanScreen } from './PlanScreen'
 
 export function SettingsScreen() {
-  const { navigate, user, subscription, updateRelationshipStatus, updateEmail, signOut, deleteAccount } = useAppState()
+  const { navigate, user, updateRelationshipStatus, updateEmail, signOut, deleteAccount } = useAppState()
   const [showPlan, setShowPlan] = useState(false)
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const [deleting, setDeleting] = useState(false)
@@ -102,13 +102,6 @@ export function SettingsScreen() {
   if (showPlan) {
     return <PlanScreen onClose={() => setShowPlan(false)} />
   }
-
-  const planLabel =
-    subscription?.planType === 'monthly'
-      ? copy.settings.monthly
-      : subscription?.planType === 'annual'
-        ? copy.settings.annual
-        : copy.settings.loyalty
 
   return (
     <div className="flex flex-1 flex-col">
@@ -204,18 +197,15 @@ export function SettingsScreen() {
           )}
         </Card>
 
-        {/* Plano: agora só abre a subtela. O cancelamento mora lá dentro. */}
+        {/* Plano: só abre a subtela com os detalhes (Essência + Conexão) e o
+            cancelamento. Aqui não mostramos valor, pois a pessoa pode ter os dois
+            planos com cobranças diferentes. */}
         <button
           type="button"
           onClick={() => setShowPlan(true)}
           className="flex w-full items-center justify-between rounded-[20px] border border-slate-200/70 bg-white/90 p-6 text-left"
         >
-          <div>
-            <p className="text-sm font-semibold text-slate-500">{copy.settings.currentPlanLabel}</p>
-            <p className="mt-1 text-[15px] text-slate-800">
-              {subscription?.status === 'active' ? planLabel : copy.settings.noActivePlan}
-            </p>
-          </div>
+          <p className="text-[15px] font-semibold text-slate-800">{copy.settings.myCurrentPlan}</p>
           <ChevronRight size={20} strokeWidth={1.6} className="flex-shrink-0 text-slate-400" />
         </button>
 

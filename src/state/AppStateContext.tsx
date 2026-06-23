@@ -13,6 +13,7 @@ import { consumeCrashFlag } from '../services/crashTracker'
 import type { CardDetails, EvolutionSummaryPoint } from '../services'
 import { formatExerciseForChat, getExerciseById, type Exercise } from '../lib/exercises'
 import { lifeStageFromStatus } from '../lib/lifeStage'
+import { isConexaoActive } from '../lib/planAccess'
 import type {
   AIChatMessage,
   GoalId,
@@ -39,6 +40,8 @@ export type View =
   | 'evolution'
   | 'exercise'
   | 'settings'
+  | 'connectionUpsell'
+  | 'practice'
 
 interface AppState {
   view: View
@@ -95,7 +98,10 @@ const AppStateContext = createContext<(AppState & AppActions) | null>(null)
 function resumeView(user: User): View {
   if (!user.name) return 'profile'
   if (!user.goal) return 'goal'
-  if (user.subscriptionStatus !== 'active') return 'subscription'
+  // O app libera se o Essência está ativo OU se o Conexão ainda está vigente
+  // (item: planos com vidas independentes — um segura o app enquanto vigente).
+  const essenciaActive = user.subscriptionStatus === 'active'
+  if (!essenciaActive && !isConexaoActive(user)) return 'subscription'
   return 'dashboard'
 }
 

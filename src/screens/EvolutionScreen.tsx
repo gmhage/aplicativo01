@@ -24,21 +24,27 @@ export function EvolutionScreen() {
   const [loadingReflection, setLoadingReflection] = useState(false)
   const [summary, setSummary] = useState<string | null>(null)
 
-  // Pede um resumo da evolução à IA sempre que a série muda. A assinatura
+  // O resumo olha só os ÚLTIMOS dias (não a ofensiva inteira): mais relevante
+  // para a pessoa, e mais barato/rápido quando a IA estiver ligada (menos dados
+  // por chamada). O gráfico continua mostrando todo o histórico (rolável).
+  const SUMMARY_WINDOW_DAYS = 10
+  const summarySeries = useMemo(() => series.slice(-SUMMARY_WINDOW_DAYS), [series])
+
+  // Pede um resumo da evolução à IA sempre que a janela muda. A assinatura
   // (data + humor + ansiedade) evita refazer a chamada sem necessidade.
   const summaryKey = useMemo(
-    () => series.map((p) => `${p.date}:${p.moodScore}:${p.anxietyLevel}`).join('|'),
-    [series],
+    () => summarySeries.map((p) => `${p.date}:${p.moodScore}:${p.anxietyLevel}`).join('|'),
+    [summarySeries],
   )
   useEffect(() => {
-    if (series.length === 0) {
+    if (summarySeries.length === 0) {
       setSummary(null)
       return
     }
     let cancelled = false
     setSummary(null)
     void requestEvolutionSummary(
-      series.map((p) => ({ date: p.date, moodScore: p.moodScore, anxietyLevel: p.anxietyLevel })),
+      summarySeries.map((p) => ({ date: p.date, moodScore: p.moodScore, anxietyLevel: p.anxietyLevel })),
     ).then((text) => {
       if (!cancelled) setSummary(text)
     })

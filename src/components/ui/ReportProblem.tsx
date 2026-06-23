@@ -124,7 +124,7 @@ export function ReportProblem({ currentScreenLabel, variant }: ReportProblemProp
 export const SCREEN_LABELS: Record<string, string> = {
   dashboard: 'Início',
   journal: 'Meu diário',
-  aiCoach: 'IA Coach',
+  aiCoach: 'Espaço de Conversa',
   evolution: 'Evolução',
   settings: 'Ajustes',
   exercise: 'Exercício',

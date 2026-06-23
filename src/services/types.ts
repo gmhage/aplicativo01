@@ -95,6 +95,35 @@ export interface EvolutionSummaryPoint {
   anxietyLevel: number // 1 a 10
 }
 
+// Uma fala da conversa de treino (role-play), para dar contexto à IA.
+export interface PracticeTurn {
+  from: 'user' | 'ai'
+  text: string
+}
+
+// Resposta da IA DENTRO do papel do cenário (ela atua como o "par", não como
+// coach). Usada no treino de conversa do SoulSpace Conexão.
+export interface PracticeReplyRequest {
+  userName: string
+  // Cenário em treino (ex.: "Primeiro encontro").
+  scenarioTitle: string
+  // Briefing de como a IA deve atuar naquele cenário (o aiRole do cenário).
+  scenarioRole: string
+  // Conversa até agora (para a IA manter o personagem e o fio).
+  history: PracticeTurn[]
+  // O que a pessoa acabou de dizer.
+  userMessage: string
+}
+
+// Pedido de feedback ao final do treino: a IA analisa a conversa e devolve um
+// retorno construtivo e acolhedor (o que foi bem, o que dá para melhorar).
+export interface PracticeFeedbackRequest {
+  userName: string
+  scenarioTitle: string
+  scenarioRole: string
+  history: PracticeTurn[]
+}
+
 export interface AIService {
   greetingForMood(userName: string, mood: MoodId, anxietyLevel: number): string
   reply(request: AIReplyRequest): Promise<{ text: string; exerciseSuggested: string | null }>
@@ -104,6 +133,10 @@ export interface AIService {
   // Resumo curto (até 2 linhas) interpretando a evolução de humor e ansiedade
   // ao longo dos dias, em linguagem neutra de gênero, para a tela de Evolução.
   evolutionSummary(points: EvolutionSummaryPoint[]): Promise<{ text: string }>
+  // Treino de conversa (SoulSpace Conexão): a IA atua no papel do cenário.
+  practiceReply(request: PracticeReplyRequest): Promise<{ text: string }>
+  // Feedback construtivo ao final do treino de conversa.
+  practiceFeedback(request: PracticeFeedbackRequest): Promise<{ text: string }>
 }
 
 export interface CardDetails {

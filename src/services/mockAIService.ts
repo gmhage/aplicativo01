@@ -2,7 +2,14 @@ import { moodThemes } from '../theme/moodTheme'
 import type { LifeStage } from '../lib/lifeStage'
 import type { MoodId } from '../types'
 import { delay, readValue, writeValue } from './localStorageDb'
-import type { AIReplyRequest, AIService, EvolutionSummaryPoint, PositiveReflectionRequest } from './types'
+import type {
+  AIReplyRequest,
+  AIService,
+  EvolutionSummaryPoint,
+  PositiveReflectionRequest,
+  PracticeFeedbackRequest,
+  PracticeReplyRequest,
+} from './types'
 
 // Mock do OpenAI GPT-4. Sem chave real: as respostas vêm de bancos de
 // variações por categoria (palavra-chave + nível de ansiedade), escolhidas
@@ -730,6 +737,41 @@ class MockAIService implements AIService {
       lifeStage: request.lifeStage,
     }
     return replyToKeywords(ctx, request.userMessage)
+  }
+
+  // Treino de conversa (simulado). Sem IA real, a "atuação" no papel é limitada,
+  // então mantemos respostas acolhedoras e abertas, que puxam a pessoa a
+  // continuar — o suficiente para validar o fluxo do produto sem custo de API.
+  // Com a IA ligada, isto é substituído pela atuação real (ver claudeAIService).
+  async practiceReply(request: PracticeReplyRequest): Promise<{ text: string }> {
+    await delay(700 + Math.random() * 500)
+    const name = request.userName ? `${request.userName}, ` : ''
+    // Frases NEUTRAS de gênero (sem "curioso/a", "animado/a" etc.) — o par não
+    // tem gênero definido e a pessoa também não. Ver regra do projeto.
+    const variants = [
+      `Gostei do que você disse. Me conta um pouco mais sobre isso?`,
+      `${name}que interessante! E o que te levou a pensar assim?`,
+      `Ah, entendi. Continua… quero muito saber mais.`,
+      `Boa! E você, o que costuma curtir de fazer no seu tempo livre?`,
+      `Que legal ouvir isso. Como você se sentiu nesse momento?`,
+    ]
+    const last = lastReplyByCategory.get('practice')
+    const pool = variants.filter((v) => v !== last)
+    const chosen = pool[Math.floor(Math.random() * pool.length)] ?? variants[0]
+    lastReplyByCategory.set('practice', chosen)
+    return { text: chosen }
+  }
+
+  // Feedback do treino (simulado): acolhedor e encorajador, sem analisar a
+  // conversa de fato (isso vem da IA real). Reforça que treinar já é progresso.
+  async practiceFeedback(_request: PracticeFeedbackRequest): Promise<{ text: string }> {
+    await delay(600 + Math.random() * 400)
+    return {
+      text:
+        'Você teve coragem de praticar, e isso já é o passo mais difícil. ' +
+        'Cada ensaio desses deixa a conversa real um pouco mais leve e natural. ' +
+        'Continue treinando — a confiança se constrói repetição por repetição.',
+    }
   }
 }
 

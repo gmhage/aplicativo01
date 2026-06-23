@@ -5,11 +5,13 @@ grátis e não chama nenhuma API. Quando você for vender e quiser **IA de verda
 tudo já está pré-montado: basta seguir os passos abaixo. Sem a configuração, nada
 muda (continua o simulador, custo zero, nada quebra).
 
-A IA real cobre **3 lugares** do app:
+A IA real cobre **5 lugares** do app:
 
 - **Reflexão do dia** (tela de Evolução, dias críticos)
 - **Chat da IA Coach** (a conversa)
 - **Resumo da evolução** (o textinho no topo da tela de Evolução)
+- **Treino de conversa — atuação** (SoulSpace Conexão: a IA faz o papel do cenário)
+- **Treino de conversa — feedback** (a IA analisa o treino e dá retorno no fim)
 
 Em todos, se a IA falhar (rede/timeout/erro), o app **cai automaticamente no
 simulador** — o usuário nunca fica sem resposta.
@@ -84,6 +86,9 @@ Faça commit e `git push`. O Vercel rebuilda e a IA real entra no ar.
 - Abra a **IA Coach** e mande uma mensagem qualquer: a resposta deve variar de
   verdade (não mais frases fixas).
 - Veja o **resumo da evolução** e uma **reflexão do dia**.
+- No **SoulSpace Conexão → Treinar conversa**, escolha um cenário: a IA deve
+  atuar no papel (conduzir o date de verdade), e o **feedback** ao final deve
+  comentar a conversa que aconteceu (não mais um texto fixo).
 - Se algo falhar, o app volta pro simulador sozinho — então confira os **logs da
   função** no Vercel (aba *Logs* / *Functions*) para ver o erro real.
 

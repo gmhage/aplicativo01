@@ -1,10 +1,12 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Backend de IA do SoulSpace — Vercel Function (uma só, com 3 rotas).
+// Backend de IA do SoulSpace — Vercel Function (uma só, com 5 rotas).
 //
 // Rotas (POST):
 //   /api/ai/reflection          → reflexão do dia (3 parágrafos)
 //   /api/ai/chat                → resposta da IA Coach (texto da conversa)
 //   /api/ai/evolution-summary   → resumo curto da evolução (1–2 linhas)
+//   /api/ai/practice-reply      → treino de conversa: IA atua no papel do cenário
+//   /api/ai/practice-feedback   → treino de conversa: feedback construtivo no fim
 //
 // ⚠️ SEGURANÇA (regra de ouro do postmortem fitgym.site)
 //   A ANTHROPIC_API_KEY fica SÓ aqui, no servidor (Environment Variable do
@@ -71,6 +73,45 @@ const SYSTEM_EVOLUTION =
   `usar 1 emoji.\n` +
   `${GENDER_RULE}\n` +
   `Responda APENAS em JSON: {"text": "seu resumo"}.`
+
+// Treino de conversa (SoulSpace Conexão): a IA ATUA no papel do cenário. Aqui o
+// objetivo é treino realista, não aconselhamento — a IA é o "par", não o coach.
+const SYSTEM_PRACTICE_REPLY =
+  `Você está num TREINO DE CONVERSA do SoulSpace Conexão: um ensaio seguro para a ` +
+  `pessoa praticar uma situação de relacionamento. Você deve ATUAR NO PAPEL ` +
+  `descrito pelo cenário (ex.: o par num primeiro encontro), de forma realista, ` +
+  `calorosa e natural — como uma pessoa de verdade naquela situação. NÃO saia do ` +
+  `personagem, NÃO vire terapeuta nem dê conselhos sobre a conversa: apenas ` +
+  `conduza o diálogo com naturalidade. Mantenha respostas curtas (1 a 3 linhas), ` +
+  `faça perguntas que mantenham o papo fluindo e reaja ao que a pessoa diz. ` +
+  `Mantenha tudo respeitoso e apropriado.\n` +
+  `REGRA CRÍTICA DE NEUTRALIDADE: o papel que você faz (o "par") NÃO tem gênero ` +
+  `definido, e a pessoa também NÃO tem gênero conhecido. Atue de forma totalmente ` +
+  `neutra: NUNCA revele ou sugira ser homem ou mulher, NUNCA presuma o gênero da ` +
+  `pessoa, e NÃO use adjetivos/particípios flexionados sobre si mesmo nem sobre ` +
+  `ela ("animado/a", "sozinho/a", "cansado/a"). Use construções neutras. O app ` +
+  `acolhe pessoas de qualquer gênero e orientação — a conversa precisa servir a ` +
+  `todas igualmente.\n` +
+  `${GENDER_RULE}\n` +
+  `Responda APENAS em JSON: {"text": "sua fala no papel"}.`
+
+// Feedback ao final do treino: AGORA sim a IA sai do papel e analisa a conversa.
+const SYSTEM_PRACTICE_FEEDBACK =
+  `O treino de conversa terminou. Saindo do papel, dê à pessoa um feedback ` +
+  `construtivo e acolhedor sobre como ela se saiu nesse ensaio, em 3 a 4 linhas: ` +
+  `comece reconhecendo 1 ou 2 pontos que foram bem (com exemplo do que ela ` +
+  `disse), depois traga 1 sugestão concreta e gentil de melhoria, e termine ` +
+  `encorajando. Tom de quem torce pela pessoa, nunca crítico nem genérico.\n` +
+  `${GENDER_RULE}\n` +
+  `Responda APENAS em JSON: {"text": "seu feedback"}.`
+
+// Formata o histórico da conversa de treino para o prompt.
+function formatPracticeHistory(history: any[]): string {
+  if (!Array.isArray(history)) return ''
+  return history
+    .map((m: any) => `${m.from === 'ai' ? 'Você (no papel)' : 'Pessoa'}: ${m.text}`)
+    .join('\n')
+}
 
 // Extrai o texto do bloco de resposta e faz JSON.parse com proteção.
 function parseJson<T>(raw: string): T {
@@ -144,8 +185,37 @@ async function handleEvolutionSummary(d: any) {
   return { text: parsed.text }
 }
 
+async function handlePracticeReply(d: any) {
+  const history = formatPracticeHistory(d.history)
+  const userContent =
+    `Cenário do treino: ${d.scenarioTitle}\n` +
+    `Como atuar neste cenário: ${d.scenarioRole}\n` +
+    `Nome da pessoa: ${d.userName || '(sem nome)'}\n` +
+    (history ? `\nConversa até agora:\n${history}\n` : '') +
+    `\nA pessoa acabou de dizer: ${d.userMessage}\n` +
+    `Responda no papel, dando sequência à conversa.`
+  const raw = await callClaude(SYSTEM_PRACTICE_REPLY, userContent, 300)
+  const parsed = parseJson<{ text: string }>(raw)
+  if (typeof parsed.text !== 'string' || !parsed.text.trim()) throw new Error('invalid_shape')
+  return { text: parsed.text }
+}
+
+async function handlePracticeFeedback(d: any) {
+  const history = formatPracticeHistory(d.history)
+  const userContent =
+    `Cenário treinado: ${d.scenarioTitle}\n` +
+    `Papel que você fazia: ${d.scenarioRole}\n` +
+    `Nome da pessoa: ${d.userName || '(sem nome)'}\n` +
+    `\nA conversa do treino foi:\n${history || '(conversa muito curta)'}\n` +
+    `\nDê o feedback do treino.`
+  const raw = await callClaude(SYSTEM_PRACTICE_FEEDBACK, userContent, 350)
+  const parsed = parseJson<{ text: string }>(raw)
+  if (typeof parsed.text !== 'string' || !parsed.text.trim()) throw new Error('invalid_shape')
+  return { text: parsed.text }
+}
+
 // ── Roteador da Vercel Function ──────────────────────────────────────────────
-// Uma função, três rotas. A rota vem no fim do caminho: /api/ai/<rota>.
+// Uma função, cinco rotas. A rota vem no fim do caminho: /api/ai/<rota>.
 
 export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') {
@@ -162,6 +232,8 @@ export default async function handler(req: any, res: any) {
     if (route === 'reflection') result = await handleReflection(body)
     else if (route === 'chat') result = await handleChat(body)
     else if (route === 'evolution-summary') result = await handleEvolutionSummary(body)
+    else if (route === 'practice-reply') result = await handlePracticeReply(body)
+    else if (route === 'practice-feedback') result = await handlePracticeFeedback(body)
     else {
       res.status(404).json({ error: 'unknown_route' })
       return

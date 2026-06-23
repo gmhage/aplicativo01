@@ -16,7 +16,7 @@ export function BottomNav({ active, onNavigate, firstName }: BottomNavProps) {
   const items: Array<{ view: View; label: string; icon: typeof House }> = [
     { view: 'dashboard', label: 'Início', icon: House },
     { view: 'journal', label: 'Meu diário', icon: BookHeart },
-    { view: 'aiCoach', label: 'IA Coach', icon: MessageCircleHeart },
+    { view: 'aiCoach', label: 'Conversar & Evoluir', icon: MessageCircleHeart },
     { view: 'evolution', label: evolutionLabel, icon: LineChart },
     { view: 'settings', label: 'Ajustes', icon: Settings },
   ]

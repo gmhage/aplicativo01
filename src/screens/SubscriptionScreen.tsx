@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Lock } from 'lucide-react'
+import { Check, Lock } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { SelectableCard } from '../components/ui/Card'
 import { ProgressDots } from '../components/ui/ProgressDots'
@@ -51,7 +51,31 @@ export function SubscriptionScreen() {
         </p>
       )}
 
-      <div className="mt-6 grid grid-cols-2 gap-3">
+      {/* Nome do plano + o que a pessoa leva, em copy emocional, fechando com a
+          promessa de virada. Clareza e desejo antes do cartão. */}
+      <div className="mt-5 rounded-[22px] border border-grape/10 bg-grape/[0.04] p-5">
+        <p className="font-display text-[18px] font-semibold text-ink">{copy.subscription.planName}</p>
+        <p className="mt-0.5 text-[13.5px] italic text-ink/55">{copy.subscription.planTagline}</p>
+        <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.12em] text-grape/55">
+          {copy.subscription.includesLabel}
+        </p>
+        <ul className="mt-2.5 space-y-2.5">
+          {copy.subscription.includes.map((item) => (
+            <li key={item} className="flex items-start gap-2.5 text-[14px] leading-snug text-ink/75">
+              <Check size={16} strokeWidth={2.5} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--color-primary)' }} />
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p
+          className="mt-4 border-t border-grape/10 pt-4 font-display text-[15px] font-semibold leading-snug"
+          style={{ color: 'var(--color-primary-strong)' }}
+        >
+          {copy.subscription.includesClosing}
+        </p>
+      </div>
+
+      <div className="mt-5 grid grid-cols-2 gap-3">
         <SelectableCard selected={planType === 'monthly'} onClick={() => setPlanType('monthly')}>
           <p className="font-semibold text-slate-800">{copy.subscription.monthlyLabel}</p>
           <p className="mt-1 text-sm text-slate-500">{copy.subscription.monthlyPrice}</p>
@@ -65,6 +89,7 @@ export function SubscriptionScreen() {
           >
             {copy.subscription.annualBadge}
           </span>
+          <p className="mt-1.5 text-xs text-slate-400">{copy.subscription.annualSub}</p>
         </SelectableCard>
       </div>
 
@@ -104,7 +129,14 @@ export function SubscriptionScreen() {
       </div>
 
       <div className="mt-8">
-        <Button loading={loading} onClick={handleSubmit}>
+        {/* Botão de compra em VERDE-ESMERALDA (renovação/esperança), não coral —
+            a cor de "sinal verde, vai dar tudo certo", convidativa ao clique. */}
+        <Button
+          loading={loading}
+          onClick={handleSubmit}
+          className="text-white shadow-[0_12px_28px_-10px_rgba(16,185,129,0.55)] hover:brightness-[1.04]"
+          style={{ background: 'linear-gradient(120deg,#10B981 0%,#059669 100%)' }}
+        >
           {loading ? copy.subscription.payButtonLoading : copy.subscription.payButton}
         </Button>
         <p className="mt-3 flex items-center justify-center gap-1.5 text-xs text-ink/45">

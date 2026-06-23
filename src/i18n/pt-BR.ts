@@ -14,7 +14,7 @@ const copy = {
 
   welcome: {
     title: 'Prepare sua alma para o relacionamento que você quer',
-    subtitle: 'Diário emocional, IA Coach e um plano guiado para reduzir a ansiedade, um dia por vez.',
+    subtitle: 'Diário emocional, um espaço de conversa e um plano guiado para reduzir a ansiedade, um dia por vez.',
     cta: 'Começar agora',
   },
 
@@ -64,11 +64,24 @@ const copy = {
   subscription: {
     title: 'Escolha seu plano',
     subtitlePrefix: 'Plano recomendado para você:',
+    // Nome e benefícios do plano de entrada (Essência), para ficar claro o que
+    // a pessoa está contratando antes de colocar o cartão.
+    planName: 'SoulSpace Essência',
+    planTagline: 'O cuidado começa em você.',
+    includesLabel: 'O que você leva',
+    includes: [
+      'Um lugar só seu pra colocar pra fora, sem ninguém julgando',
+      'Alguém pra conversar quando o peito aperta, a qualquer hora',
+      'Um caminho pronto, um passo por dia: é só seguir',
+      'Veja com os próprios olhos o quanto você muda',
+    ],
+    includesClosing: 'E tudo começa hoje: o dia em que a sua vida afetiva vira de chave.',
     monthlyLabel: 'Mensal',
     monthlyPrice: 'R$ 39,90/mês',
     annualLabel: 'Anual',
     annualPrice: 'R$ 299,90/ano',
     annualBadge: '7 meses grátis',
+    annualSub: 'equivale a R$ 24,99/mês',
     cardNumberLabel: 'Número do cartão',
     cardNumberPlaceholder: '0000 0000 0000 0000',
     cardExpiryLabel: 'Validade',
@@ -76,8 +89,8 @@ const copy = {
     cardCvvLabel: 'CVV',
     cardCvvPlaceholder: '123',
     saveCardLabel: 'Salvar cartão para renovação automática',
-    payButton: 'Comprar agora',
-    payButtonLoading: 'Processando pagamento…',
+    payButton: 'Começar a minha transformação',
+    payButtonLoading: 'Preparando tudo para você…',
     securityNote: 'Ambiente seguro e privado. Seus dados são só seus.',
     successTitle: 'Boas-vindas ao SoulSpace! 🎉',
     successSubtitle: 'Pagamento confirmado. Seu plano já está pronto para o primeiro dia.',
@@ -97,7 +110,7 @@ const copy = {
       heading: (name: string) => `${name ? `${name}, ` : ''}que bom ter você aqui.`,
       paragraphs: [
         'O SoulSpace não é igual pra todo mundo: ele é seu, único, feito sob medida pra sua evolução. Porque ninguém é igual a você — e cuidar de quem você é leva uma vida inteira. Aqui você nunca está só. É um passo por dia rumo a uma evolução que você nem imagina que vem por aí.',
-        'Cada registro no diário, cada conversa com a IA Coach — exclusivamente personalizada pro seu momento — cada exercício e reflexão constroem um caminho só seu. É esse cuidado que prepara o terreno pra relações mais saudáveis e uma fase mais leve e feliz. Confie no processo, confie na gente. Vamos juntos, hoje.',
+        'Cada registro no diário, cada conversa no seu espaço de conversa — exclusivamente personalizada pro seu momento — cada exercício e reflexão constroem um caminho só seu. É esse cuidado que prepara o terreno pra relações mais saudáveis e uma fase mais leve e feliz. Confie no processo, confie na gente. Vamos juntos, hoje.',
         'E não largue isso por nada: de tudo que você abre no celular, este é o app que de fato muda a sua vida. Você é único — e sua evolução também é. Quem fica, colhe: daqui a alguns meses vai olhar pra trás e agradecer por ter continuado. 💚',
       ],
     },
@@ -108,8 +121,41 @@ const copy = {
     planLabel: (goal: string) => `Seu plano: ${goal}`,
     streakLabel: (days: number) => `${days} dias seguidos`,
     exerciseCta: 'Exercício do dia',
-    aiCta: 'Falar com a IA Coach',
+    aiCta: 'Conversar & Evoluir',
     progressLabel: 'Progresso',
+    practiceCta: 'Treinar conversa',
+    practiceCtaHint: 'Simule um date e ganhe confiança, sem medo',
+    practiceCtaExpired: 'Seu Conexão venceu — toque para renovar e voltar a treinar',
+    // Faixa de retomada (aparece após cancelar, enquanto o período pago não vence)
+    resumeCta: 'Retomar a assinatura do meu plano',
+    resumeHint: 'Seus dados e sua evolução ainda estão aqui. Volte de onde parou.',
+    // Faixa de renovação do Essência (venceu, mas o Conexão segura o app de pé)
+    renewEssenciaCta: 'Seu plano não foi renovado ainda — toque para renovar',
+    renewEssenciaHint: 'Seu Conexão segue ativo. Renove o Essência para não perder nada.',
+    resumeHintWithDate: (date: string) =>
+      `Seus dados ficam guardados até ${date}. Retome até lá e continue de onde parou.`,
+  },
+
+  // Treino de conversa do SoulSpace Conexão (menu de cenários → conversa → feedback).
+  practice: {
+    title: 'Treinar conversa',
+    intro: 'Escolha uma situação para praticar. É um ensaio seguro: erre aqui à vontade, que lá fora você chega com mais confiança.',
+    menuLabel: 'Situações para praticar',
+    startCta: 'Começar treino',
+    chatInputPlaceholder: 'Escreva como você responderia…',
+    chatSendLabel: 'Enviar',
+    endTrainingCta: 'Encerrar e ver feedback',
+    endTrainingNoFeedbackCta: 'Encerrar sem feedback',
+    backToMenuCta: 'Escolher outra situação',
+    feedbackTitle: 'Como foi o seu treino',
+    feedbackLoading: 'Preparando o seu feedback…',
+    feedbackIntro: 'Olha só o que dá pra perceber desse ensaio:',
+    feedbackClose: 'Voltar ao início',
+    feedbackAgain: 'Treinar de novo',
+    // Feedback simples usado quando a IA está desligada (sem custo). Com a IA
+    // ligada, o feedback vem personalizado da conversa.
+    feedbackOfflineMessage:
+      'Você teve coragem de praticar, e isso já é o passo mais difícil. Cada ensaio desses deixa a conversa real um pouco mais leve. Continue treinando — a confiança se constrói repetição por repetição.',
   },
 
   challenge: {
@@ -181,14 +227,14 @@ const copy = {
   },
 
   aiCoach: {
-    title: 'A IA Coach está aqui com você',
+    title: 'Seu espaço de conversa',
     inputPlaceholder: 'Escreva sua mensagem…',
     sendButton: 'Enviar',
     quickReplies: ['Sugira um exercício físico', 'Estou com ansiedade', 'Quero um conselho'],
-    timeoutMessage: 'A IA está demorando para responder. Tentando de novo…',
-    unavailableMessage: 'A IA Coach está indisponível agora. Tente de novo em alguns minutos.',
-    supportFallback: (email: string) => `A IA não respondeu depois de algumas tentativas. Fale com a gente: ${email}`,
-    offlineMessage: 'A IA Coach precisa de internet para responder. Volte quando a conexão estiver de novo.',
+    timeoutMessage: 'A resposta está demorando um pouco. Tentando de novo…',
+    unavailableMessage: 'O espaço de conversa está indisponível agora. Tente de novo em alguns minutos.',
+    supportFallback: (email: string) => `Não conseguimos responder depois de algumas tentativas. Fale com a gente: ${email}`,
+    offlineMessage: 'O espaço de conversa precisa de internet para responder. Volte quando a conexão estiver de novo.',
   },
 
   exercise: {
@@ -208,8 +254,8 @@ const copy = {
     emptyTitle: 'Ainda não há o que mostrar',
     emptyBody: 'Registre seu diário por alguns dias e seu gráfico de evolução aparece aqui.',
     emptyCta: 'Fazer meu diário de hoje',
-    chartHint: 'Toque num ponto do gráfico para reler aquele dia.',
-    summaryHeading: 'Resumo da sua evolução',
+    chartHint: 'Arraste o gráfico para o lado para ver outros dias. Toque num ponto para reler aquele dia.',
+    summaryHeading: 'Resumo da sua evolução nos últimos dias',
     summaryLoading: 'Lendo o seu gráfico…',
     // Painel de ação (reflexão + exercício) que abre ao clicar num dia crítico
     actionTitle: 'Um momento para você',
@@ -244,6 +290,7 @@ const copy = {
     editProfile: 'Editar perfil',
     currentPlanLabel: 'Plano atual',
     noActivePlan: 'Sem assinatura ativa',
+    myCurrentPlan: 'Meu plano atual',
     monthly: 'Mensal · R$ 39,90/mês',
     annual: 'Anual · R$ 299,90/ano',
     loyalty: 'Fidelidade · 12 meses garantidos',
@@ -260,11 +307,11 @@ const copy = {
     // Privacidade (seção acolhedora) + apagar dados.
     privacyTitle: 'Sua privacidade vem primeiro',
     privacyBody:
-      'O SoulSpace foi feito pra ser um lugar seguro. Seu diário, seus humores e suas conversas com a IA Coach são protegidos e tratados com sigilo — ninguém da nossa equipe lê o que é seu. Você está no controle: pode apagar seus dados quando quiser.',
+      'O SoulSpace foi feito pra ser um lugar seguro. Seu diário, seus humores e suas conversas no seu espaço de conversa são protegidos e tratados com sigilo — ninguém da nossa equipe lê o que é seu. Você está no controle: pode apagar seus dados quando quiser.',
     deleteAccountCta: 'Apagar meus dados',
     deleteConfirmTitle: 'Apagar seus dados?',
     deleteConfirmBody:
-      'Isso apaga seu diário, suas conversas com a IA Coach e todo o seu progresso de forma definitiva. Não dá pra desfazer. Sua conta continua ativa e você pode recomeçar do zero quando quiser.',
+      'Isso apaga seu diário, suas conversas e todo o seu progresso de forma definitiva. Não dá pra desfazer. Sua conta continua ativa e você pode recomeçar do zero quando quiser.',
     deleteConfirmSubscriptionWarning:
       'Atenção: isso NÃO cancela sua assinatura. A cobrança continua ativa. Para cancelar o plano, vá em Plano atual.',
     deleteConfirmButton: 'Sim, apagar meus dados',
@@ -311,6 +358,137 @@ const copy = {
     backCta: 'Voltar',
     cancelLink: 'Preciso cancelar minha assinatura',
 
+    // ── Quiz de motivo do cancelamento (antes dos fluxos de retenção) ────────
+    cancelQuiz: {
+      title: 'Antes de ir, o que aconteceu?',
+      intro: 'Sua resposta ajuda a gente a cuidar melhor de você e de quem está nessa jornada. Leva 10 segundos.',
+      reasonsLabel: 'O motivo principal foi…',
+      reasons: [
+        { id: 'price', label: 'Achei caro', nudge: 'Antes de ir por preço: temos uma oferta pra caber no seu bolso na próxima tela.' },
+        { id: 'time', label: 'Não estou usando o quanto queria', nudge: 'Cinco minutos por dia já mudam o jogo. A constância é o nosso forte — e a sua.' },
+        { id: 'noresult', label: 'Não senti resultado ainda', nudge: 'Resultado emocional leva tempo. Sua evolução pode estar mais perto do que parece.' },
+        { id: 'fixed', label: 'Já resolvi o que precisava', nudge: 'Que vitória! E lembre: manter o que você conquistou também é cuidado contínuo.' },
+      ],
+      otherLabel: 'Outro motivo',
+      otherPlaceholder: 'Conta pra gente o que rolou…',
+      needReasonWarning: 'Escolha um motivo (ou escreva em "Outro motivo") para continuar.',
+      stayCta: 'Pensando bem, não vou cancelar — quero evoluir um dia de cada vez',
+      continueCta: 'Continuar com o cancelamento',
+    },
+
+    // ── SoulSpace Conexão (upsell) na tela de plano ──────────────────────────
+    connection: {
+      // Cabeçalho de seção
+      sectionLabel: 'Seu plano',
+      essenciaLabel: 'SoulSpace Essência',
+      essenciaTagline: 'Diário, espaço de conversa, plano guiado e evolução',
+      conexaoLabel: 'SoulSpace Conexão',
+      conexaoTagline: 'Treino de conversa com IA, simulador de encontro e feedback',
+      conexaoActiveBadge: 'Ativo',
+      // Quando o plano NÃO está ativo, o card mostra "Assinar" no lugar do badge.
+      subscribeBadge: 'Assinar',
+
+      // Rótulo "Plano atual: <nome> — <preço>"
+      currentPlanPrefix: 'Plano atual',
+      essenciaName: 'Essência',
+      conexaoName: 'Conexão (upgrade)',
+      // Linha de preço por tipo de cobrança
+      priceMonthly: (v: string) => `${v}/mês`,
+      priceAnnual: (v: string) => `${v}/ano`,
+      priceDiscount: (v: string) => `${v}/mês (oferta especial)`,
+      tapForDetails: 'Toque para ver detalhes',
+
+      // Tela de DETALHES do Essência (abre ao tocar no card do Essência)
+      essenciaDetailsTitle: 'SoulSpace Essência',
+      essenciaDetailsTagline: 'O cuidado começa em você.',
+      essenciaIncludesLabel: 'O seu Essência inclui',
+      essenciaIncludes: [
+        'Um lugar só seu pra colocar pra fora, sem ninguém julgando',
+        'Alguém pra conversar quando o peito aperta, a qualquer hora',
+        'Um caminho pronto, um passo por dia: é só seguir',
+        'Veja com os próprios olhos o quanto você muda',
+      ],
+      essenciaPlanLine: 'Cobrança do Essência',
+      essenciaJournalCta: 'Diário emocional de hoje',
+
+      // Tela de DETALHES do Conexão (abre ao tocar no card)
+      detailsTitle: 'SoulSpace Conexão',
+      detailsTagline: 'Plenitude em cada conexão.',
+      detailsIncludesLabel: 'O seu Conexão inclui',
+      detailsIncludes: [
+        'Simulador de encontro para treinar sem medo',
+        'Feedback que mostra o que foi bem e o que melhorar',
+        'Cenários difíceis: dizer não, se abrir, lidar com sumiço',
+        'Espaço de conversa sem limite, a qualquer hora',
+      ],
+      detailsPlanLine: 'Cobrança do Conexão',
+      detailsTrainCta: 'Abrir o treino de conversa',
+      detailsBackCta: 'Voltar',
+      detailsCancelCta: 'Cancelar plano',
+
+      // Card de UPGRADE (aparece para quem ainda é só Essência)
+      upgradeTitle: 'Desbloqueie o SoulSpace Conexão',
+      upgradeLead: 'Você já está cuidando de você. Que tal treinar a conversa de verdade e chegar com confiança no que importa?',
+      upgradeBenefits: [
+        'Simulador de encontro: pratique um date sem medo de errar',
+        'Feedback que mostra o que foi bem e o que melhorar',
+        'Cenários difíceis: dizer não, se abrir, lidar com um sumiço',
+        'Espaço de conversa sem limite, a qualquer hora',
+      ],
+      upgradeMonthlyLabel: 'Mensal',
+      upgradeMonthlyPrice: '+ R$ 29,90/mês',
+      upgradeAnnualLabel: 'Anual',
+      upgradeAnnualPrice: 'R$ 199,90/ano',
+      upgradeAnnualBadge: 'Economize ~44%',
+      upgradeAnnualSub: 'equivale a R$ 16,66/mês',
+      upgradeCta: 'Quero o Conexão',
+      upgradeCtaLoading: 'Ativando…',
+      upgradeReassurance: 'Você mantém tudo do Essência. O Conexão só soma. Cancele quando quiser.',
+      upgradeDoneTitle: 'Bem-vindo ao Conexão! 🎉',
+      upgradeDoneBody: 'Seu treino de conversa está liberado. Sempre que quiser, é só abrir “Treinar conversa” na tela inicial.',
+      upgradeDoneCta: 'Começar a treinar',
+
+      // Rótulo do plano atual quando é Conexão
+      currentConexaoMonthly: 'SoulSpace Conexão · mensal',
+      currentConexaoAnnual: 'SoulSpace Conexão · anual',
+
+      // Link para gerenciar/cancelar só o Conexão
+      manageConexaoLink: 'Gerenciar o meu Conexão',
+
+      // Cancelamento do Conexão — passo 1: o que perde
+      cancelConexaoReflectTitle: 'Antes de soltar o Conexão',
+      cancelConexaoReflectIntro: 'Você pode cancelar só o Conexão e seguir no Essência. Mas dá uma olhada no que deixa de ter:',
+      cancelConexaoLosses: [
+        'O simulador de encontro para treinar sem medo',
+        'O feedback que te mostra como evoluir na conversa',
+        'Os cenários difíceis (dizer não, se abrir, lidar com sumiço)',
+        'O espaço de conversa sem limite, sempre que precisar',
+      ],
+      cancelConexaoArgument:
+        'A parte mais difícil — começar — você já fez. É justo na hora de praticar que a confiança aparece. Que tal seguir mais um pouco antes de soltar?',
+      cancelConexaoStayCta: 'Pensando bem, vou manter',
+      cancelConexaoContinueCta: 'Quero cancelar o Conexão mesmo assim',
+
+      // Cancelamento do Conexão — passo 2: oferta de desconto
+      cancelConexaoOfferTitle: 'Que tal continuar por menos?',
+      cancelConexaoOfferBody:
+        'Antes de cancelar, leve o Conexão por R$ 19,90/mês nos próximos 3 meses. É a sua chance de praticar mais um pouco, com um preço especial só pra você, agora.',
+      cancelConexaoOfferPriceLine: 'R$ 19,90/mês por 3 meses · depois volta ao normal',
+      cancelConexaoOfferAcceptCta: 'Aceitar e continuar treinando',
+      cancelConexaoOfferStayCta: 'Vou manter como está',
+      cancelConexaoOfferDeclineCta: 'Não, cancelar o Conexão',
+
+      // Cancelamento do Conexão — passo 3: confirmação
+      cancelConexaoFinalTitle: 'Cancelar o Conexão',
+      cancelConexaoFinalBody:
+        'Você continua com o SoulSpace Essência normalmente, com tudo que já usa. Só o treino de conversa do Conexão será desativado ao fim do período já pago. Confirmar?',
+      cancelConexaoFinalConfirmCta: 'Sim, cancelar só o Conexão',
+      cancelConexaoFinalKeepCta: 'Não, manter o Conexão',
+      cancelConexaoDoneTitle: 'Conexão cancelado',
+      cancelConexaoDoneBody: 'Você segue no Essência, tranquilo. Quando quiser treinar a conversa de novo, o Conexão estará aqui te esperando.',
+      cancelConexaoDoneCta: 'Voltar',
+    },
+
     // Tela de oferta de fidelização (upsell)
     loyaltyTitle: 'Garanta o seu próximo ano 💚',
     loyaltyLead: 'Sua evolução não precisa ter prazo de validade.',
@@ -334,7 +512,7 @@ const copy = {
     cancelReflectLosses: [
       'Sua ofensiva e a sequência de dias que você construiu',
       'O desafio atual e os próximos da sua jornada de um ano',
-      'A IA Coach que já conhece o seu momento e fala com você',
+      'O espaço de conversa que já conhece o seu momento e fala com você',
       'O seu histórico de humor e a sua evolução até aqui',
     ],
     cancelReflectArgument:
@@ -359,6 +537,41 @@ const copy = {
     cancelledTitle: 'Sua assinatura foi cancelada',
     cancelledBody: 'Você ainda tem acesso até o fim do período pago. A porta fica aberta: quando quiser voltar, a gente continua de onde você parou.',
     cancelledBackCta: 'Voltar ao app',
+  },
+
+  // Upsell do SoulSpace Conexão (treino de conversa com IA). Copy persuasiva,
+  // 100% neutra de gênero. Ataca a dor #1: medo de rejeição / paralisia no
+  // contato real — o que o Essência conforta, o Conexão treina.
+  connectionUpsell: {
+    eyebrow: 'Novo · SoulSpace Conexão',
+    title: 'Pratique o relacionamento que você quer',
+    lead: 'Você está cuidando de você e, seguindo o método do SoulSpace, já vem evoluindo. Que tal dar o próximo passo: treinar a conversa de verdade, sem medo de errar?',
+    painLine: 'Sabe aquele frio na barriga antes de um date, o branco na hora de puxar assunto, o medo do não? A gente treina isso junto, num lugar seguro.',
+    featuresLabel: 'O que você desbloqueia',
+    features: [
+      {
+        title: 'Simulador de encontro',
+        body: 'Converse com o SoulSpace como se fosse um date real: puxar assunto, primeiro encontro, marcar de sair. Erre aqui, acerte lá fora.',
+      },
+      {
+        title: 'Feedback que orienta',
+        body: 'Depois de cada treino, o SoulSpace mostra o que foi bem e o que dá para melhorar, sem julgamento. Autocrítica vira evolução.',
+      },
+      {
+        title: 'Cenários difíceis',
+        body: 'Ensaie dizer não, expor um sentimento, lidar com um sumiço. As conversas que assustam ficam mais leves com prática.',
+      },
+      {
+        title: 'Espaço de conversa sem limite',
+        body: 'Converse o quanto precisar, a qualquer hora. Quem está evoluindo todo dia merece companhia ilimitada.',
+      },
+    ],
+    humanNote: 'Cada conversa aqui nasce de conhecimento real sobre comportamento humano e relações — para te acolher de um jeito gente, não robótico.',
+    priceLine: 'Por apenas R$ 29,90/mês a mais',
+    priceSubline: 'Muito menos que uma sessão de terapia, com a diferença que aqui você usa a qualquer horário, em qualquer dia.',
+    ctaPrimary: 'Quero o Conexão',
+    ctaSecondary: 'Agora não, seguir no Essência',
+    reassurance: 'Você mantém tudo do Essência. O Conexão só soma. Cancele quando quiser.',
   },
 
   moodOptions: [

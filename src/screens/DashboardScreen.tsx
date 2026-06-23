@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
-import { BookHeart, MessageCircleHeart, Trophy, Wind } from 'lucide-react'
+import { useEffect, useMemo, useState } from 'react'
+import { BookHeart, MessageCircleHeart, RotateCcw, Sparkles, Trophy, Wind } from 'lucide-react'
 import { Header } from '../components/layout/Header'
 import { Button } from '../components/ui/Button'
 import { Card } from '../components/ui/Card'
@@ -8,6 +8,15 @@ import { ProgressBar } from '../components/ui/ProgressBar'
 import copy from '../i18n/pt-BR'
 import { getChallengeById, getNextChallenge, TOTAL_CHALLENGES } from '../lib/challenges'
 import { computeStreak } from '../lib/streak'
+import { devExpireConexao, hasEverHadConexao, planTierOf, setPlanTier } from '../lib/planTier'
+import { conexaoExpired, needsEssenciaRenewal } from '../lib/planAccess'
+import { isCancelledButStillValid } from '../lib/dataRetention'
+import {
+  markUpsellAutoOpened,
+  resetUpsellAutoOpen,
+  shouldAutoOpenUpsell,
+  shouldShowConexaoUpsell,
+} from '../lib/upsellTrigger'
 import { useAppState } from '../state/AppStateContext'
 
 function isToday(isoDate: string): boolean {
@@ -17,6 +26,7 @@ function isToday(isoDate: string): boolean {
 export function DashboardScreen() {
   const {
     user,
+    subscription,
     mood,
     setMood,
     navigate,
@@ -32,6 +42,33 @@ export function DashboardScreen() {
 
   const journaledToday = journalEntries.some((entry) => isToday(entry.createdAt))
   const streak = useMemo(() => computeStreak(journalEntries), [journalEntries])
+  const hasConexao = planTierOf(user) === 'conexao'
+  // Estados de plano (item: dois planos com vidas independentes).
+  const needRenewEssencia = needsEssenciaRenewal(user, subscription)
+  const isConexaoExpired = conexaoExpired(user)
+  // Essência cancelado, porém ainda válido até o fim do período pago → mostra a
+  // faixa "retomar" (o app segue funcionando, mas avisamos que foi cancelado).
+  const essenciaCancelledValid = isCancelledButStillValid(subscription)
+  // (apenas dev) força a exibição do botão para testar o gatilho sem ter que
+  // envelhecer a conta. Não afeta produção (o controle só aparece em DEV).
+  const [forceUpsell, setForceUpsell] = useState(false)
+  // Quem tem o Conexão vê sempre o botão (é a função dele). Quem JÁ TEVE também
+  // vê (como reassinatura). Quem nunca teve só vê após o gatilho de engajamento
+  // (7 dias + evolução, ou 10 dias).
+  const showPracticeButton =
+    hasConexao || hasEverHadConexao(user) || forceUpsell || shouldShowConexaoUpsell(user, journalEntries)
+
+  // Abertura automática da tela de upsell: 1ª vez quando o gatilho liga, depois
+  // até 1x/semana em bom momento, no máximo 3 vezes (ver lib/upsellTrigger).
+  useEffect(() => {
+    if (hasConexao) return
+    if (shouldAutoOpenUpsell(user, journalEntries, mood)) {
+      markUpsellAutoOpened(user)
+      navigate('connectionUpsell')
+    }
+    // Roda na entrada do dashboard; depende do usuário/registros/humor atuais.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id])
 
   // Card de conclusão tem prioridade: ocupa a tela quando um desafio acabou.
   if (justCompletedChallenge) {
@@ -82,6 +119,50 @@ export function DashboardScreen() {
     <div className="flex flex-1 flex-col">
       <Header title={`Olá, ${firstName}`} />
 
+      {/* Essência não renovado, mas o app ainda roda graças ao Conexão (item 1+2):
+          faixa avisando e levando à renovação do plano base. */}
+      {needRenewEssencia && (
+        <button
+          type="button"
+          onClick={() => navigate('subscription')}
+          className="mb-4 flex w-full items-center justify-between rounded-[22px] px-6 py-5 text-left text-white shadow-aura transition-all hover:brightness-[1.05]"
+          style={{ background: 'linear-gradient(120deg,#F5A524,#FB7A36)' }}
+        >
+          <span className="min-w-0">
+            <span className="block text-[16px] font-bold">{copy.dashboard.renewEssenciaCta}</span>
+            <span className="mt-0.5 block text-sm text-white/90">{copy.dashboard.renewEssenciaHint}</span>
+          </span>
+          <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
+            <RotateCcw size={22} strokeWidth={2} />
+          </span>
+        </button>
+      )}
+
+      {/* Essência CANCELADO mas ainda dentro do período pago: avisa e convida a
+          retomar. Os dados/acesso seguem até o período vencer. */}
+      {!needRenewEssencia && essenciaCancelledValid && (
+        <button
+          type="button"
+          onClick={() => navigate('subscription')}
+          className="mb-4 flex w-full items-center justify-between rounded-[22px] px-6 py-5 text-left text-white shadow-aura transition-all hover:brightness-[1.05]"
+          style={{ background: 'linear-gradient(120deg,#FB5436,#DB2777)' }}
+        >
+          <span className="min-w-0">
+            <span className="block text-[16px] font-bold">{copy.dashboard.resumeCta}</span>
+            <span className="mt-0.5 block text-sm text-white/85">
+              {subscription?.endDate
+                ? copy.dashboard.resumeHintWithDate(
+                    new Date(subscription.endDate).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long' }),
+                  )
+                : copy.dashboard.resumeHint}
+            </span>
+          </span>
+          <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
+            <RotateCcw size={22} strokeWidth={2} />
+          </span>
+        </button>
+      )}
+
       {(showGrace || showReset) && (
         <div className="mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
           {showReset ? copy.challenge.resetNotice : copy.challenge.graceWarning(streak.daysSinceLast, streak.count)}
@@ -123,6 +204,34 @@ export function DashboardScreen() {
           <BookHeart size={22} strokeWidth={2} />
         </span>
       </button>
+
+      {/* Conexão: treino de conversa. Aparece só após o gatilho de engajamento
+          (ou sempre, para quem já tem o plano). Quem tem entra no treino; quem
+          não tem cai no upsell. Botão destacado, no gradiente da marca. */}
+      {showPracticeButton && (
+        <button
+          type="button"
+          // Conexão vigente → treino. Vencido (ou nunca teve) → upsell pra (re)assinar.
+          onClick={() => navigate(hasConexao && !isConexaoExpired ? 'practice' : 'connectionUpsell')}
+          className="mt-4 flex w-full items-center justify-between rounded-[22px] px-6 py-5 text-left text-white shadow-aura transition-all hover:brightness-[1.05]"
+          style={{ background: 'linear-gradient(120deg,#10B981 0%,#6D28D9 52%,#FB5436 100%)' }}
+        >
+          <span className="min-w-0">
+            <span className="flex items-center gap-2">
+              <span className="block text-[16px] font-bold">{copy.dashboard.practiceCta}</span>
+              <span className="rounded-full bg-white/20 px-2 py-[2px] text-[10px] font-bold uppercase tracking-[0.1em] ring-1 ring-white/20">
+                Conexão
+              </span>
+            </span>
+            <span className="mt-0.5 block text-sm text-white/85">
+              {isConexaoExpired ? copy.dashboard.practiceCtaExpired : copy.dashboard.practiceCtaHint}
+            </span>
+          </span>
+          <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
+            <Sparkles size={22} strokeWidth={2} />
+          </span>
+        </button>
+      )}
 
       <div className="mt-4 grid grid-cols-2 gap-3">
         <button
@@ -194,6 +303,74 @@ export function DashboardScreen() {
                 className="text-xs font-medium text-slate-400 underline"
               >
                 (demo) concluir desafio agora
+              </button>
+              <button
+                type="button"
+                onClick={() => navigate('connectionUpsell')}
+                className="text-xs font-medium text-slate-400 underline"
+              >
+                (demo) ver upsell Conexão
+              </button>
+              <button
+                type="button"
+                onClick={() => navigate('practice')}
+                className="text-xs font-medium text-slate-400 underline"
+              >
+                (demo) abrir treino de conversa
+              </button>
+              <button
+                type="button"
+                onClick={() => setForceUpsell((v) => !v)}
+                className="text-xs font-medium text-slate-400 underline"
+              >
+                {forceUpsell ? '(demo) ocultar botão Conexão' : '(demo) forçar gatilho do upsell'}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  resetUpsellAutoOpen(user)
+                  setPlanTier(user, 'essencia')
+                  window.location.reload()
+                }}
+                className="text-xs font-medium text-slate-400 underline"
+              >
+                (demo) resetar upsell (voltar a Essência)
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setPlanTier(user, 'conexao', 'annual')
+                  window.location.reload()
+                }}
+                className="text-xs font-medium text-slate-400 underline"
+              >
+                (demo) virar Conexão
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  // Limpa a assinatura salva e volta à escolha de plano, para
+                  // testar mensal/anual do zero (sai do estado 'loyalty').
+                  try {
+                    localStorage.removeItem('soulspace:subscription')
+                  } catch {
+                    // storage bloqueado: ignora
+                  }
+                  navigate('subscription')
+                }}
+                className="text-xs font-medium text-slate-400 underline"
+              >
+                (demo) escolher plano de novo (mensal/anual)
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  devExpireConexao(user)
+                  window.location.reload()
+                }}
+                className="text-xs font-medium text-slate-400 underline"
+              >
+                (demo) vencer o Conexão
               </button>
             </div>
           )}
